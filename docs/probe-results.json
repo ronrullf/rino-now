@@ -1,0 +1,397 @@
+{
+  "executedAt": "2026-10-03T15:33:30.342Z",
+  "results": [
+    {
+      "name": "9NKX70BBCDRN-US",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=US&languages=en-US&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=US&languages=en-US&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9NKX70BBCDRN"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9NKX70BBCDRN-TR",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=TR&languages=tr-TR&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=TR&languages=tr-TR&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9NKX70BBCDRN"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9NKX70BBCDRN-IN",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=IN&languages=en-IN&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=IN&languages=en-IN&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9NKX70BBCDRN"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9NKX70BBCDRN-JP",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=JP&languages=ja-JP&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NKX70BBCDRN&market=JP&languages=ja-JP&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9NKX70BBCDRN"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9PNSZ7GMWCQZ-US",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=US&languages=en-US&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=US&languages=en-US&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9PNSZ7GMWCQZ"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9PNSZ7GMWCQZ-TR",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=TR&languages=tr-TR&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=TR&languages=tr-TR&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9PNSZ7GMWCQZ"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9PNSZ7GMWCQZ-IN",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=IN&languages=en-IN&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=IN&languages=en-IN&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9PNSZ7GMWCQZ"
+      ],
+      "count": 1
+    },
+    {
+      "name": "9PNSZ7GMWCQZ-JP",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=JP&languages=ja-JP&fieldsTemplate=Details",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9PNSZ7GMWCQZ&market=JP&languages=ja-JP&fieldsTemplate=Details",
+      "shape": [
+        "Products"
+      ],
+      "productIds": [
+        "9PNSZ7GMWCQZ"
+      ],
+      "count": 1
+    },
+    {
+      "name": "search",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/productFamilies/Games/products?query=forza&market=US&languages=en-US&fieldsTemplate=Details&platformdependencyname=windows.xbox",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/productFamilies/Games/products?query=forza&market=US&languages=en-US&fieldsTemplate=Details&platformdependencyname=windows.xbox",
+      "shape": [
+        "ProductIds",
+        "Aggregations",
+        "HasMorePages",
+        "Products",
+        "TotalResultCount"
+      ],
+      "productIds": [
+        "9P8PGC771MLP",
+        "9PN4DRJDLZT7",
+        "9PLKVSWR299F",
+        "9N5MZM3J3LCQ",
+        "9MTLKM2DJMZ2",
+        "9P1HX37NMJLT",
+        "9NKX70BBCDRN",
+        "9MZ0SR207MG8",
+        "9P7V09FQ5C56",
+        "9P513P4MWC71"
+      ],
+      "count": 10,
+      "hasMorePages": true
+    },
+    {
+      "name": "search-dlc",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/productFamilies/Games/products?query=forza%20hot%20wheels&market=US&languages=en-US&fieldsTemplate=Details&platformdependencyname=windows.xbox",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/productFamilies/Games/products?query=forza%20hot%20wheels&market=US&languages=en-US&fieldsTemplate=Details&platformdependencyname=windows.xbox",
+      "shape": [
+        "ProductIds",
+        "Aggregations",
+        "HasMorePages",
+        "Products",
+        "TotalResultCount"
+      ],
+      "productIds": [
+        "9MTLKM2DJMZ2",
+        "9PNSZ7GMWCQZ",
+        "9MZ0SR207MG8",
+        "9N423C013B1F",
+        "9NGKMPB3S10P",
+        "9NZZBQ6FLG0D",
+        "9P7V09FQ5C56",
+        "9MT7X6ZPLLM4"
+      ],
+      "count": 8,
+      "hasMorePages": false
+    },
+    {
+      "name": "search-empty",
+      "url": "https://displaycatalog.mp.microsoft.com/v7.0/productFamilies/Games/products?query=zzqqnonexistent9876&market=US&languages=en-US&fieldsTemplate=Details&platformdependencyname=windows.xbox",
+      "status": 200,
+      "finalUrl": "https://displaycatalog.mp.microsoft.com/v7.0/productFamilies/Games/products?query=zzqqnonexistent9876&market=US&languages=en-US&fieldsTemplate=Details&platformdependencyname=windows.xbox",
+      "shape": [
+        "ProductIds",
+        "Aggregations",
+        "HasMorePages",
+        "Products",
+        "TotalResultCount"
+      ],
+      "productIds": [],
+      "count": 0,
+      "hasMorePages": false
+    },
+    {
+      "name": "fx",
+      "url": "https://api.frankfurter.dev/v2/rates?base=USD&quotes=TRY,INR,JPY",
+      "status": 200,
+      "finalUrl": "https://api.frankfurter.dev/v2/rates?base=USD&quotes=TRY,INR,JPY",
+      "shape": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "currencies",
+      "url": "https://api.frankfurter.dev/v2/currencies",
+      "status": 200,
+      "finalUrl": "https://api.frankfurter.dev/v2/currencies",
+      "shape": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98",
+        "99",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116",
+        "117",
+        "118",
+        "119",
+        "120",
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127",
+        "128",
+        "129",
+        "130",
+        "131",
+        "132",
+        "133",
+        "134",
+        "135",
+        "136",
+        "137",
+        "138",
+        "139",
+        "140",
+        "141",
+        "142",
+        "143",
+        "144",
+        "145",
+        "146",
+        "147",
+        "148",
+        "149",
+        "150",
+        "151",
+        "152",
+        "153",
+        "154",
+        "155",
+        "156",
+        "157",
+        "158",
+        "159",
+        "160",
+        "161",
+        "162",
+        "163",
+        "164"
+      ]
+    },
+    {
+      "name": "link-US",
+      "url": "https://www.xbox.com/en-US/games/store/game/9NKX70BBCDRN",
+      "status": 200,
+      "finalUrl": "https://www.xbox.com/en-US/games/store/game/9NKX70BBCDRN",
+      "shape": "html",
+      "htmlProductIdentity": true,
+      "htmlLanguage": "en"
+    },
+    {
+      "name": "link-TR",
+      "url": "https://www.xbox.com/tr-TR/games/store/game/9NKX70BBCDRN",
+      "status": 500,
+      "finalUrl": "https://www.xbox.com/tr-TR/games/store/game/9NKX70BBCDRN",
+      "shape": "html",
+      "htmlProductIdentity": true,
+      "htmlLanguage": "tr"
+    },
+    {
+      "name": "link-IN",
+      "url": "https://www.xbox.com/en-IN/games/store/game/9NKX70BBCDRN",
+      "status": 200,
+      "finalUrl": "https://www.xbox.com/en-IN/games/store/game/9NKX70BBCDRN",
+      "shape": "html",
+      "htmlProductIdentity": true,
+      "htmlLanguage": "en"
+    },
+    {
+      "name": "link-JP",
+      "url": "https://www.xbox.com/ja-JP/games/store/game/9NKX70BBCDRN",
+      "status": 200,
+      "finalUrl": "https://www.xbox.com/ja-JP/games/store/game/9NKX70BBCDRN",
+      "shape": "html",
+      "htmlProductIdentity": true,
+      "htmlLanguage": "ja"
+    }
+  ]
+}

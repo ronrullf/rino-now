@@ -1,0 +1,1189 @@
+{
+  "Products": [
+    {
+      "ProductId": "9PNSZ7GMWCQZ",
+      "ProductType": "Durable",
+      "ProductKind": "Durable",
+      "LocalizedProperties": [
+        {
+          "ProductTitle": "Forza Horizon 5: Hot Wheels Expansion",
+          "PublisherName": "Xbox Game Studios",
+          "Images": [
+            {
+              "Uri": "//store-images.s-microsoft.com/image/apps.39564.14337700501983954.bd1bedb1-636e-4cb5-9fb9-6bda5bd998e8.dbc769de-db5a-4dd9-9298-04874b1b40ff",
+              "ImagePurpose": "Poster"
+            },
+            {
+              "Uri": "//store-images.s-microsoft.com/image/apps.8266.14337700501983954.bd1bedb1-636e-4cb5-9fb9-6bda5bd998e8.cbfcac7c-2f17-4cdb-a1ca-e8e235900f30",
+              "ImagePurpose": "BoxArt"
+            }
+          ]
+        }
+      ],
+      "MarketProperties": [
+        {
+          "Markets": ["JP"]
+        }
+      ],
+      "Properties": {
+        "XboxConsoleGenCompatible": ["ConsoleGen8", "ConsoleGen9"]
+      },
+      "DisplaySkuAvailabilities": [
+        {
+          "Sku": {
+            "ProductId": "9PNSZ7GMWCQZ",
+            "SkuId": "0010",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null,
+            "Properties": {
+              "IsTrial": false,
+              "IsPreOrder": false,
+              "IsBundle": false,
+              "IsRepurchasable": false,
+              "BundledSkus": null,
+              "FulfillmentData": {
+                "ProductId": "9PNSZ7GMWCQZ",
+                "PackageFamilyName": "Microsoft.Expansion1FH5_8wekyb3d8bbwe",
+                "WuCategoryId": "22383a28-70e0-45a2-93e3-d8e6b74f557f"
+              }
+            }
+          },
+          "Availabilities": [
+            {
+              "AvailabilityId": "B2V0J7R7K78V",
+              "SkuId": "0010",
+              "Actions": [
+                "Details",
+                "Fulfill",
+                "Purchase",
+                "Browse",
+                "Curate",
+                "Redeem"
+              ],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B07MJHLNQ19M",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Purchase", "Browse", "Curate"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9SJCZDHW896G",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0K6L8"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9P329CM1WMFJ",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Purchase", "Browse", "Curate"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9ZH7BH6P9RM7",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0K5DJ"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z",
+                "MerchandisingTags": ["LegacyDiscountGold"]
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B434PC17M14P",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Purchase", "Browse", "Curate"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9ZH7BH6P9RM7",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0K5DJ"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z",
+                "MerchandisingTags": ["LegacyDiscountGold"]
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B4G87JZK870N",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Purchase", "Browse", "Curate"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9ZNPVF4DTWVC",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0KGQ8"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9QWLFD0GP351",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Browse", "Curate", "Gift"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9SJCZDHW896G",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0K6L8"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B3HLBP1G021B",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Browse", "Curate", "Gift"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9ZH7BH6P9RM7",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0K5DJ"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z",
+                "MerchandisingTags": ["LegacyDiscountGold"]
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9SKX3ZRX4N84",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Browse", "Curate", "Gift"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9ZH7BH6P9RM7",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0K5DJ"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z",
+                "MerchandisingTags": ["LegacyDiscountGold"]
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9T6J5W5BKF1F",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Browse", "Curate", "Gift"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9VS0V3JRZJCB",
+              "SkuId": "0010",
+              "Actions": ["Details", "Fulfill", "Browse", "Curate", "Gift"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9ZNPVF4DTWVC",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0KGQ8"
+                }
+              ],
+              "Properties": {
+                "OriginalReleaseDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 836,
+                  "MSRP": 2090
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9X4PZ9F7WV10",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B4ZGKW7731ZB",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9ND33117XG94",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9N2BGW5GSZ4T",
+              "SkuId": "0010",
+              "Actions": ["License", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Mobile"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Team"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Holographic"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.8828080"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Core"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9QDCMBJJRK43",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9R22ZX074LR0",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B156D6L2N8V7",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9W6K9XFMZR12",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9RQR6RSZ7K6B",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9NZFD26FPR0W",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9W2D5T9QG1MP",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9X4HMM56HLD7",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B1M8XNB1TXN8",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9R4VG9NH84RX",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "B2109LFVZGL3",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T09:59:59.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {
+                "MerchandisingTags": ["LegacyDiscountGold"]
+              },
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9P2PTJMD0RPL",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            },
+            {
+              "AvailabilityId": "9Z193G006KBK",
+              "SkuId": "0010",
+              "Actions": ["License", "Browse", "Details"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-10-08T10:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2026-10-01T10:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Sku": {
+            "ProductId": "9PNSZ7GMWCQZ",
+            "SkuId": "0017",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null,
+            "Properties": {
+              "IsTrial": false,
+              "IsPreOrder": true,
+              "IsBundle": false,
+              "IsRepurchasable": false,
+              "BundledSkus": null,
+              "FulfillmentData": {
+                "ProductId": "9PNSZ7GMWCQZ",
+                "PackageFamilyName": "Microsoft.Expansion1FH5_8wekyb3d8bbwe",
+                "WuCategoryId": "22383a28-70e0-45a2-93e3-d8e6b74f557f"
+              }
+            }
+          },
+          "Availabilities": [
+            {
+              "AvailabilityId": "B1J0T94WJLL3",
+              "SkuId": "0017",
+              "Actions": ["Details", "Redeem"],
+              "Markets": ["JP"],
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": ["1"],
+                "StartDate": "2022-07-19T17:00:00.0000000Z"
+              },
+              "Properties": {},
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "JPY",
+                  "ListPrice": 0,
+                  "MSRP": 0
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

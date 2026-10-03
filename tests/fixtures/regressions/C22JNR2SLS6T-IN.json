@@ -1,0 +1,490 @@
+{
+  "Products": [
+    {
+      "LastModifiedDate": "2026-02-18T20:53:33.0855792Z",
+      "LocalizedProperties": [
+        {
+          "ProductTitle": "GTA Online: Criminal Enterprise Starter Pack",
+          "PublisherName": "Rockstar Games",
+          "Images": [
+            {
+              "FileId": "2000000000033357240",
+              "EISListingIdentifier": {
+                "ListingId": "1152921504657811934",
+                "AssetId": "1152921504917645856"
+              },
+              "BackgroundColor": "#FFFFFF",
+              "Caption": null,
+              "FileSizeInBytes": 1491717,
+              "ForegroundColor": "#FFFFFF",
+              "Height": 1080,
+              "ImagePositionInfo": null,
+              "ImagePurpose": "BoxArt",
+              "UnscaledImageSHA256Hash": "DTaEUt9amSToJdjrwyJ7hvfYyOaK6z2DdccqzmbFNdw=",
+              "Uri": "//store-images.s-microsoft.com/image/apps.13837.65781964941357562.d284dfd5-7e8e-4428-9ed0-4c77546905c8.dcaaf0ab-329a-47db-b538-a30eb960da51",
+              "Width": 1080
+            }
+          ],
+          "Language": "en-in"
+        }
+      ],
+      "MarketProperties": [
+        {
+          "Markets": [
+            "IN"
+          ],
+          "RelatedProducts": [
+            {
+              "RelatedProductId": "BPJ686W6S0NH",
+              "RelationshipType": "addOnParent"
+            },
+            {
+              "RelatedProductId": "BXCDKG72GQC4",
+              "RelationshipType": "addOnParent"
+            },
+            {
+              "RelatedProductId": "BPJ686W6S0NH",
+              "RelationshipType": "SellableBy"
+            },
+            {
+              "RelatedProductId": "BPJ686W6S0NH",
+              "RelationshipType": "SellableBy"
+            },
+            {
+              "RelatedProductId": "BXCDKG72GQC4",
+              "RelationshipType": "SellableBy"
+            },
+            {
+              "RelatedProductId": "BXCDKG72GQC4",
+              "RelationshipType": "SellableBy"
+            }
+          ]
+        }
+      ],
+      "ProductASchema": "Product;3",
+      "ProductBSchema": "ProductAddOn;3",
+      "ProductId": "C22JNR2SLS6T",
+      "Properties": {
+        "Category": "Action & adventure",
+        "Categories": [
+          "Action & adventure"
+        ],
+        "IsOmexProduct": false,
+        "PackageFamilyName": "",
+        "PackageIdentityName": "",
+        "PrimaryCategory": "Game",
+        "PublisherCertificateName": "",
+        "PublisherId": "31881420",
+        "Subcategory": null,
+        "XboxXPA": null,
+        "Attributes": null,
+        "SkuDisplayGroups": [
+          {
+            "Id": "01",
+            "Treatment": "MergeAvailabilities"
+          }
+        ],
+        "XboxCrossGenSetId": null,
+        "XboxConsoleGenOptimized": null,
+        "XboxConsoleGenCompatible": null,
+        "XboxLiveGoldRequired": false,
+        "XBOX": {},
+        "ExtendedClientMetadata": {},
+        "OwnershipType": null,
+        "PdpBackgroundColor": "#FFFFFF",
+        "HasAddOns": false,
+        "RevisionId": "2026-02-18T20:53:34.7574884Z",
+        "EntitlementProperties": [
+          "Durable"
+        ]
+      },
+      "AlternateIds": [
+        {
+          "IdType": "LegacyXboxProductId",
+          "Value": "0f12e872-55e8-448a-a651-df25809613d9"
+        }
+      ],
+      "DomainDataVersion": null,
+      "IngestionSource": "DCE",
+      "IsMicrosoftProduct": false,
+      "PreferredSkuId": "0001",
+      "ProductType": "Durable",
+      "MerchandizingTags": [],
+      "SandboxId": "RETAIL",
+      "ProductFamily": "Games",
+      "SchemaVersion": "3",
+      "IsSandboxedProduct": true,
+      "ProductKind": "Durable",
+      "ProductPolicies": {},
+      "DisplaySkuAvailabilities": [
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-02-18T20:53:33.0855792Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "GTA Online: Criminal Enterprise Starter Pack"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "SupportedLanguages": [
+                  "en-us",
+                  "zh-cn",
+                  "ar-sa",
+                  "de-de",
+                  "es-es",
+                  "ja-jp",
+                  "fr-fr",
+                  "ru-ru",
+                  "es-ar",
+                  "en-au",
+                  "en-ca",
+                  "fr-ca",
+                  "da-dk",
+                  "fi-fi",
+                  "zh-hk",
+                  "en-in",
+                  "he-il",
+                  "it-it",
+                  "ko-kr",
+                  "es-mx",
+                  "nl-nl",
+                  "nb-no",
+                  "pl-pl",
+                  "pt-br",
+                  "pt-pt",
+                  "sv-se",
+                  "de-ch",
+                  "fr-ch",
+                  "zh-tw",
+                  "tr-tr",
+                  "en-gb",
+                  "es-us",
+                  "en-ie",
+                  "en-nz",
+                  "fr-be",
+                  "zh-sg",
+                  "de-at",
+                  "nl-be",
+                  "en-sg",
+                  "en-za",
+                  "en-hk",
+                  "es-cl",
+                  "es-co",
+                  "en-il",
+                  "en-sk",
+                  "en-cz",
+                  "en-hu",
+                  "en-ae",
+                  "en-sa",
+                  "en-gr"
+                ],
+                "FirstAvailableDate": "2017-12-14T00:00:00.0000000Z",
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "IN"
+                ]
+              }
+            ],
+            "ProductId": "C22JNR2SLS6T",
+            "Properties": {
+              "ApplicableLegacyPlatforms": null,
+              "CustomDeveloperData": null,
+              "MagazineIssueData": null,
+              "FulfillmentData": null,
+              "FulfillmentType": null,
+              "FulfillmentPluginId": null,
+              "XboxXPA": false,
+              "HardwareProperties": null,
+              "HardwareRequirements": null,
+              "HardwareWarningList": null,
+              "SkuDisplayGroupIds": [
+                "01"
+              ],
+              "EarlyAdopterEnrollmentUrl": null,
+              "HasThirdPartyIAPs": false,
+              "InstallationTerms": "InstallationTermsRestrictiveXbox",
+              "LastUpdateDate": "2026-02-18T20:53:33.0000000Z",
+              "VersionString": null,
+              "BundledSkus": [
+                {
+                  "BigId": "BT9KBV0J0DQC",
+                  "DisplayRank": 0,
+                  "IsPrimary": false,
+                  "FulfillmentType": null
+                },
+                {
+                  "BigId": "BSB8P3ZRJ7FZ",
+                  "DisplayRank": 1,
+                  "IsPrimary": false,
+                  "FulfillmentType": null
+                }
+              ],
+              "IsRepurchasable": false,
+              "SkuDisplayRank": 0,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [
+                "ae99bf81-7690-4a3d-81f2-cdd2b3c12875"
+              ],
+              "AdditionalIdentifiers": [],
+              "IsTrial": false,
+              "IsPreOrder": false,
+              "IsBundle": true
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuAddOn;3",
+            "SkuId": "0001",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details",
+                "Purchase",
+                "Browse",
+                "Curate",
+                "Redeem"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityAddOn;3",
+              "AvailabilityId": "B109QV9X7NMX",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2021-08-09T08:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2024-06-21T21:02:33.0706123Z",
+              "Markets": [
+                "IN"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [
+                    "xboxonlycontent"
+                  ],
+                  "InclusionProperties": [
+                    "legacy:Tokens",
+                    "legacy:CurrencyStoredValue",
+                    "legacy:CreditCard",
+                    "legacy:CurrencyStoredValueWithCreditCardTopOff",
+                    "legacy:PayPal"
+                  ]
+                },
+                "Price": {
+                  "CurrencyCode": "INR",
+                  "IsPIRequired": true,
+                  "ListPrice": 724,
+                  "MSRP": 724,
+                  "TaxType": "NoApplicableTaxes"
+                }
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2017-12-14T00:00:00.0000000Z"
+              },
+              "SkuId": "0001",
+              "DisplayRank": 0,
+              "AlternateIds": [
+                {
+                  "IdType": "LegacyTokenIdentifier",
+                  "Value": "0f12e872-55e8-448a-a651-df25809613d9"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                "Details",
+                "Browse",
+                "Curate",
+                "Gift"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityAddOn;3",
+              "AvailabilityId": "9SZW8WTC73H7",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2021-08-09T08:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2024-06-21T21:02:33.0706123Z",
+              "Markets": [
+                "IN"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [
+                    "xboxonlycontent"
+                  ],
+                  "InclusionProperties": [
+                    "legacy:Tokens",
+                    "legacy:CurrencyStoredValue",
+                    "legacy:CreditCard",
+                    "legacy:CurrencyStoredValueWithCreditCardTopOff",
+                    "legacy:PayPal"
+                  ]
+                },
+                "Price": {
+                  "CurrencyCode": "INR",
+                  "IsPIRequired": true,
+                  "ListPrice": 724,
+                  "MSRP": 724,
+                  "TaxType": "NoApplicableTaxes"
+                },
+                "OrderManagementPolicyIdOverride": "microsoft.mint.token",
+                "GeofencingPolicyId": "GIFTGEO:IN"
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2017-12-14T00:00:00.0000000Z"
+              },
+              "SkuId": "0001",
+              "DisplayRank": 1,
+              "AlternateIds": []
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityAddOn;3",
+              "AvailabilityId": "9PQPK841LS2J",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2021-08-09T08:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2024-06-21T21:02:33.0706123Z",
+              "Markets": [
+                "IN"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 2,
+              "AlternateIds": [
+                {
+                  "IdType": "LegacyTokenIdentifier",
+                  "Value": "0f12e872-55e8-448a-a651-df25809613d9"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                "License",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityAddOn;3",
+              "AvailabilityId": "9VT321J0SPZ1",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Mobile"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Team"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Holographic"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.8828080"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Core"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2024-06-21T21:02:33.0706123Z",
+              "Markets": [
+                "IN"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

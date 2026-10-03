@@ -1,0 +1,12 @@
+CREATE TABLE products(product_id TEXT PRIMARY KEY,title TEXT NOT NULL,data TEXT NOT NULL);
+CREATE INDEX products_title_idx ON products(title COLLATE NOCASE);
+CREATE TABLE regional_snapshots(product_id TEXT NOT NULL REFERENCES products(product_id),market TEXT NOT NULL,data TEXT NOT NULL,PRIMARY KEY(product_id,market));
+CREATE TABLE regional_refresh_state(product_id TEXT NOT NULL REFERENCES products(product_id),market TEXT NOT NULL,last_attempt_at TEXT NOT NULL,last_error_code TEXT,PRIMARY KEY(product_id,market));
+CREATE TABLE fx_snapshots(provider TEXT NOT NULL,quote_currency TEXT NOT NULL,effective_date TEXT NOT NULL,data TEXT NOT NULL,PRIMARY KEY(provider,quote_currency,effective_date));
+CREATE TABLE search_cache(cache_key TEXT PRIMARY KEY,data TEXT NOT NULL,expires_at INTEGER NOT NULL);
+CREATE INDEX search_expiry_idx ON search_cache(expires_at);
+CREATE TABLE watchlist(product_id TEXT PRIMARY KEY REFERENCES products(product_id),added_at TEXT NOT NULL);
+CREATE INDEX watchlist_order_idx ON watchlist(added_at);
+CREATE TABLE recent_products(product_id TEXT PRIMARY KEY REFERENCES products(product_id),viewed_at TEXT NOT NULL);
+CREATE INDEX recent_order_idx ON recent_products(viewed_at);
+CREATE TABLE refresh_cooldowns(product_id TEXT PRIMARY KEY REFERENCES products(product_id),attempt_at INTEGER NOT NULL);

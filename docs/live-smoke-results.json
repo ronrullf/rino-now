@@ -1,0 +1,304 @@
+{
+  "executedAt": "2026-10-03T16:15:25.487Z",
+  "results": [
+    {
+      "capability": "title search",
+      "source": "live",
+      "count": 10
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "9NKX70BBCDRN",
+      "title": "Forza Horizon 5 Standard Edition",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "TR"
+      ]
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "9PNSZ7GMWCQZ",
+      "title": "Forza Horizon 5: Hot Wheels",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "TR"
+      ]
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "9N16XHX3MB1R",
+      "title": "Fortnite - 800 V-Bucks",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "unavailable",
+          "rankEligible": false,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "IN"
+      ]
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "9NCJB85WM01G",
+      "title": "Fortnite - Mainframe Break Pack",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "TR"
+      ]
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "9NNZSNHLR63L",
+      "title": "Grand Theft Auto VI: Ultimate Edition",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "JP"
+      ]
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "9PJGM0T0827V",
+      "title": "DIRT 5",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "TR"
+      ]
+    },
+    {
+      "capability": "lookup and warm cache",
+      "id": "C22JNR2SLS6T",
+      "title": "GTA Online: Criminal Enterprise Starter Pack",
+      "regions": [
+        {
+          "market": "US",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "USD",
+          "fxProvider": "Identity",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "TR",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "TRY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "IN",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "INR",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        },
+        {
+          "market": "JP",
+          "status": "available",
+          "rankEligible": true,
+          "currency": "JPY",
+          "fxProvider": "Frankfurter",
+          "fxDate": "2026-10-03"
+        }
+      ],
+      "winners": [
+        "TR"
+      ]
+    }
+  ]
+}

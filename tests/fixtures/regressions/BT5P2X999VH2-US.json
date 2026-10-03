@@ -1,0 +1,2493 @@
+{
+  "Products": [
+    {
+      "LastModifiedDate": "2026-10-02T05:38:57.5620761Z",
+      "LocalizedProperties": [
+        {
+          "ProductTitle": "Fortnite",
+          "PublisherName": "Epic Games Inc.",
+          "Images": [
+            {
+              "FileId": "3049914073156520128",
+              "EISListingIdentifier": null,
+              "BackgroundColor": "",
+              "Caption": "",
+              "FileSizeInBytes": 4202533,
+              "ForegroundColor": "",
+              "Height": 2160,
+              "ImagePositionInfo": "",
+              "ImagePurpose": "Poster",
+              "UnscaledImageSHA256Hash": "g0PIGe+EccIogOCvlcRq8IvMKM5R8JNZlIt77F0gvhM=",
+              "Uri": "//store-images.s-microsoft.com/image/apps.17283.70702278257994163.6d75301b-59c3-4a73-b70c-5901ae9cbb44.bd4108fb-c5af-4a9a-90c5-9a25a46d76a1",
+              "Width": 1440
+            }
+          ],
+          "Language": "en-us"
+        }
+      ],
+      "MarketProperties": [
+        {
+          "Markets": [
+            "US"
+          ],
+          "RelatedProducts": [
+            {
+              "RelatedProductId": "BTLQD7D8BWWH",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "C4H7CNMKZ9JG",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "C3JP8MVVZWDS",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "C4WF26J8X2CS",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BVWG1S6MK7CX",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BZZVS9QWNDP1",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "C4S9KWR9HRH9",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BSWHDB4N2BW8",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BRD01SWKX9WS",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BWWG58N9HFKF",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BTC5H6VZBHPF",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "BXWNX8ST04JS",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9P5KHCQZLF3H",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NQ8W7N0R0L0",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9P3CK01CL83W",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NLDLDDTKB7M",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NCJTR84LWRX",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9N0ML05RVGB7",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NZRVSR2K2XP",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9PJFMVBP16CT",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9MZL842T57QN",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9PB4WLWQS892",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9P6LNN3KZ75R",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9PC5KKHSMCT5",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NTWMW2L2B3D",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NHFDZRD753R",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9N4W6K1FVRTT",
+              "RelationshipType": "Bundle"
+            },
+            {
+              "RelatedProductId": "9NSSDJRBX2HD",
+              "RelationshipType": "Bundle"
+            }
+          ]
+        }
+      ],
+      "ProductASchema": "Product;3",
+      "ProductBSchema": "ProductGame;1",
+      "ProductId": "BT5P2X999VH2",
+      "Properties": {
+        "Attributes": [
+          {
+            "Name": "XblOnlineCoop",
+            "Minimum": 2,
+            "Maximum": 4,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "XblOnlineMultiPlayer",
+            "Minimum": 2,
+            "Maximum": 100,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "BroadcastSupport",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "Capability4k",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": [
+              "Xbox"
+            ],
+            "Group": null
+          },
+          {
+            "Name": "120fps",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": [
+              "Xbox"
+            ],
+            "Group": null
+          },
+          {
+            "Name": "ConsoleGen9Optimized",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "ConsoleCrossGen",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "CapabilityXboxEnhanced",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "XPA",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "XboxLive",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          }
+        ],
+        "CanInstallToSDCard": true,
+        "Category": "Action & adventure",
+        "Categories": [
+          "Action & adventure",
+          "Other",
+          "Shooter",
+          "Simulation",
+          "Strategy"
+        ],
+        "Subcategory": null,
+        "IsAccessible": false,
+        "IsDemo": false,
+        "IsLineOfBusinessApp": false,
+        "IsPublishedToLegacyWindowsPhoneStore": false,
+        "IsPublishedToLegacyWindowsStore": false,
+        "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+        "PackageIdentityName": "436609B6.FortniteClient",
+        "PublisherCertificateName": "CN=490B3D56-2210-4C4C-9B45-E8C720DB34B2",
+        "PublisherId": "25364920",
+        "SkuDisplayGroups": [
+          {
+            "Id": "01",
+            "Treatment": "MergeAvailabilities"
+          }
+        ],
+        "XboxLiveTier": "Full",
+        "XboxXPA": null,
+        "XboxCrossGenSetId": null,
+        "XboxConsoleGenOptimized": [
+          "ConsoleGen8",
+          "ConsoleGen9"
+        ],
+        "XboxConsoleGenCompatible": [
+          "ConsoleGen8",
+          "ConsoleGen9"
+        ],
+        "XboxLiveGoldRequired": false,
+        "ExtendedMetadata": "BT5P2X999VH2_cb1f35c2-5bfa-4daa-a97b-394ee64d63ed",
+        "XBOX": {
+          "XboxProperties": "b3fa916d-9985-4a9c-9971-0eebf0cf0bae",
+          "SubmissionId": "1152921505702025264",
+          "XboxGamingMetadata": "BT5P2X999VH2_cb1f35c2-5bfa-4daa-a97b-394ee64d63ed"
+        },
+        "ExtendedClientMetadata": {},
+        "OwnershipType": null,
+        "PdpBackgroundColor": "#FFFFFF",
+        "HasAddOns": true,
+        "RevisionId": "2026-10-02T05:39:15.2797934Z",
+        "ProductGroupId": "ef24de27-7970-481f-b036-47c9566c63c5",
+        "ProductGroupName": "Fortnite"
+      },
+      "AlternateIds": [
+        {
+          "IdType": "LegacyWindowsStoreProductId",
+          "Value": "f51d8aaf-ab77-4504-8063-df2e75da2e8f"
+        },
+        {
+          "IdType": "LegacyWindowsPhoneProductId",
+          "Value": "bf5fbf34-d1c7-47d8-8682-40b3850e354c"
+        },
+        {
+          "IdType": "XboxTitleId",
+          "Value": "267695549"
+        },
+        {
+          "IdType": "LegacyXboxProductId",
+          "Value": "cb6fbdda-c872-476d-80bc-5c3d6cd5e6ea"
+        }
+      ],
+      "DomainDataVersion": null,
+      "IngestionSource": "DCE",
+      "IsMicrosoftProduct": false,
+      "PreferredSkuId": "0001",
+      "ProductType": "Game",
+      "MerchandizingTags": [],
+      "PartD": "",
+      "SandboxId": "RETAIL",
+      "ProductFamily": "Games",
+      "SchemaVersion": "3",
+      "IsSandboxedProduct": true,
+      "ProductKind": "Game",
+      "ProductPolicies": {},
+      "DisplaySkuAvailabilities": [
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-10-02T05:38:57.5620761Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "Fortnite"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "FirstAvailableDate": "2017-07-25T00:00:00.0000000Z",
+                "SupportedLanguages": [
+                  "en-us",
+                  "fi",
+                  "ko",
+                  "es",
+                  "es-mx",
+                  "da",
+                  "pt",
+                  "pl",
+                  "nb",
+                  "sv",
+                  "en",
+                  "ja",
+                  "fr",
+                  "de",
+                  "it",
+                  "nl",
+                  "tr",
+                  "ru",
+                  "ar"
+                ],
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "US"
+                ]
+              }
+            ],
+            "ProductId": "BT5P2X999VH2",
+            "Properties": {
+              "EarlyAdopterEnrollmentUrl": null,
+              "FulfillmentData": {
+                "ProductId": "BT5P2X999VH2",
+                "WuBundleId": "135c7132-e652-42cf-bcbe-949f11484634",
+                "WuCategoryId": "29309215-3ad6-4f72-aa5d-a477c6b0de77",
+                "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+                "SkuId": "0001",
+                "Content": null,
+                "PackageFeatures": null
+              },
+              "FulfillmentType": "MSIXVC",
+              "FulfillmentPluginId": "Microsoft.GamingServices_8wekyb3d8bbwe",
+              "HasThirdPartyIAPs": false,
+              "LastUpdateDate": "2026-10-02T05:38:57.0000000Z",
+              "HardwareProperties": {
+                "MinimumHardware": [],
+                "RecommendedHardware": [],
+                "MinimumProcessor": "",
+                "RecommendedProcessor": "",
+                "MinimumGraphics": "",
+                "RecommendedGraphics": ""
+              },
+              "HardwareRequirements": [],
+              "HardwareWarningList": [],
+              "InstallationTerms": "InstallationTermsRestrictiveXbox",
+              "Packages": [
+                {
+                  "PackageFamilyName": null,
+                  "ContentId": "4a617fcb-3c09-4ac5-9c4c-dc46b5263876",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 0,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                {
+                  "PackageFamilyName": null,
+                  "ContentId": "4a617fcb-3c09-4ac5-9c4c-dc46b5263876",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 0,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                {
+                  "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+                  "ContentId": "21b40136-2fdb-404b-be34-4656e6a88528",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 2814750970478592,
+                      "MinVersion": 2814750970478592,
+                      "PlatformName": "Windows.Desktop"
+                    }
+                  ]
+                }
+              ],
+              "VersionString": "",
+              "SkuDisplayGroupIds": [
+                "01"
+              ],
+              "XboxXPA": true,
+              "BundledSkus": [],
+              "IsRepurchasable": false,
+              "SkuDisplayRank": 0,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [
+                "ede211be-dff4-45c4-b47a-367ac4c9af4c",
+                "dba4c141-9379-47b3-a822-b076b69a9a86"
+              ],
+              "AdditionalIdentifiers": [],
+              "IsTrial": false,
+              "IsPreOrder": false,
+              "IsBundle": false
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuGame;1",
+            "SkuId": "0001",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details",
+                "Fulfill",
+                "Purchase",
+                "Browse",
+                "Curate",
+                "Redeem"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B2L2ZM6PCWQN",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": "TaxesNotIncluded"
+                }
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2017-07-25T00:00:00.0000000Z"
+              },
+              "SkuId": "0001",
+              "DisplayRank": 0,
+              "AlternateIds": [
+                {
+                  "IdType": "LegacyTokenIdentifier",
+                  "Value": "cb6fbdda-c872-476d-80bc-5c3d6cd5e6ea"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                "Details",
+                "Purchase",
+                "Curate"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9V9T7GKQG677",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": "TaxesNotIncluded"
+                }
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2017-07-25T00:00:00.0000000Z"
+              },
+              "SkuId": "0001",
+              "DisplayRank": 1,
+              "RemediationRequired": true,
+              "Remediations": [
+                {
+                  "RemediationId": "9Q2FPGL45CQN",
+                  "Type": "Upsell",
+                  "BigId": "CFQ7TTC0KHS0"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9TCBQ8F32G4P",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 2
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9ZLGHXRGNGS2",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 3
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9XPQ80P4KX8L",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 4
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9NC5BWH06RQJ",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 5
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9ZRPKFWW8PR1",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 6
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9Q4N1T99X2NZ",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 7
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9R3HRP6W2312",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 8
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B2D9FFZG1Q2R",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 9
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B1XNLSGQ3255",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 10
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B4WR14T2D0FG",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 11
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9ZH0J75D1NRZ",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 12
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9W2SBGBW522N",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 13
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B0803R0T2PQS",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 14
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B0K051L54B00",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 15
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9NV6FPK652NR",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 16
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9N5KT0X35BVW",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 17
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9Q4L9C1WBQTG",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 18
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B38GWH58BSZH",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 19
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9V217D54GZJG",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 20
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9WNRLJ767MLC",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 21
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9X07M4BMTXLP",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 22
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9TP6FZ8T5WDT",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 23
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B3JVSQFFJ3SP",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 24
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9X3WNXNZK8QT",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 25
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9X93CSX98N38",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 26
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9X6RB263M8KC",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 27
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9S56GQD8S40J",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 28
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B3ZGP3TZ0BPJ",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "AffirmationId": "9ZX560BHW79V",
+              "DisplayRank": 29
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B4W8Q35KQZJN",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 30,
+              "AlternateIds": [
+                {
+                  "IdType": "LegacyTokenIdentifier",
+                  "Value": "cb6fbdda-c872-476d-80bc-5c3d6cd5e6ea"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                "License",
+                "Browse",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9ZGPF6272KTJ",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2025-11-18T15:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 31
+            },
+            {
+              "Actions": [
+                "License",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9XM7C26GFXJ7",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Mobile"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Team"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Holographic"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.8828080"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Core"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0001",
+              "DisplayRank": 32
+            }
+          ]
+        },
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-10-02T05:38:57.5620761Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "Fortnite"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "FirstAvailableDate": "2017-07-25T00:00:00.0000000Z",
+                "SupportedLanguages": [
+                  "en-us",
+                  "fi",
+                  "ko",
+                  "es",
+                  "es-mx",
+                  "da",
+                  "pt",
+                  "pl",
+                  "nb",
+                  "sv",
+                  "en",
+                  "ja",
+                  "fr",
+                  "de",
+                  "it",
+                  "nl",
+                  "tr",
+                  "ru",
+                  "ar"
+                ],
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "US"
+                ]
+              }
+            ],
+            "ProductId": "BT5P2X999VH2",
+            "Properties": {
+              "EarlyAdopterEnrollmentUrl": null,
+              "FulfillmentData": {
+                "ProductId": "BT5P2X999VH2",
+                "WuBundleId": "135c7132-e652-42cf-bcbe-949f11484634",
+                "WuCategoryId": "29309215-3ad6-4f72-aa5d-a477c6b0de77",
+                "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+                "SkuId": "0003",
+                "Content": null,
+                "PackageFeatures": null
+              },
+              "FulfillmentType": "MSIXVC",
+              "FulfillmentPluginId": "Microsoft.GamingServices_8wekyb3d8bbwe",
+              "HasThirdPartyIAPs": false,
+              "LastUpdateDate": "2026-10-02T05:38:57.0000000Z",
+              "HardwareProperties": {
+                "MinimumHardware": [],
+                "RecommendedHardware": [],
+                "MinimumProcessor": "",
+                "RecommendedProcessor": "",
+                "MinimumGraphics": "",
+                "RecommendedGraphics": ""
+              },
+              "HardwareRequirements": [],
+              "HardwareWarningList": [],
+              "InstallationTerms": "InstallationTermsRestrictiveXbox",
+              "Packages": [
+                {
+                  "PackageFamilyName": null,
+                  "ContentId": "4a617fcb-3c09-4ac5-9c4c-dc46b5263876",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 0,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                {
+                  "PackageFamilyName": null,
+                  "ContentId": "4a617fcb-3c09-4ac5-9c4c-dc46b5263876",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 0,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                {
+                  "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+                  "ContentId": "21b40136-2fdb-404b-be34-4656e6a88528",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 2814750970478592,
+                      "MinVersion": 2814750970478592,
+                      "PlatformName": "Windows.Desktop"
+                    }
+                  ]
+                }
+              ],
+              "VersionString": "",
+              "SkuDisplayGroupIds": null,
+              "XboxXPA": true,
+              "BundledSkus": [],
+              "IsRepurchasable": false,
+              "SkuDisplayRank": 1,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [
+                "ede211be-dff4-45c4-b47a-367ac4c9af4c",
+                "dba4c141-9379-47b3-a822-b076b69a9a86"
+              ],
+              "AdditionalIdentifiers": [],
+              "IsTrial": false,
+              "IsPreOrder": true,
+              "IsBundle": false
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuGame;1",
+            "SkuId": "0003",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details",
+                "Redeem"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B46GQ7NFPXCP",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": "TaxesNotIncluded"
+                }
+              },
+              "Properties": {},
+              "SkuId": "0003",
+              "DisplayRank": 0
+            }
+          ]
+        },
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-10-02T05:38:57.5620761Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "Fortnite"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "FirstAvailableDate": "2017-07-25T00:00:00.0000000Z",
+                "SupportedLanguages": [
+                  "en-us",
+                  "fi",
+                  "ko",
+                  "es",
+                  "es-mx",
+                  "da",
+                  "pt",
+                  "pl",
+                  "nb",
+                  "sv",
+                  "en",
+                  "ja",
+                  "fr",
+                  "de",
+                  "it",
+                  "nl",
+                  "tr",
+                  "ru",
+                  "ar"
+                ],
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "US"
+                ]
+              }
+            ],
+            "ProductId": "BT5P2X999VH2",
+            "Properties": {
+              "EarlyAdopterEnrollmentUrl": null,
+              "FulfillmentData": {
+                "ProductId": "BT5P2X999VH2",
+                "WuBundleId": "135c7132-e652-42cf-bcbe-949f11484634",
+                "WuCategoryId": "29309215-3ad6-4f72-aa5d-a477c6b0de77",
+                "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+                "SkuId": "0004",
+                "Content": null,
+                "PackageFeatures": null
+              },
+              "FulfillmentType": "MSIXVC",
+              "FulfillmentPluginId": "Microsoft.GamingServices_8wekyb3d8bbwe",
+              "HasThirdPartyIAPs": false,
+              "LastUpdateDate": "2026-10-02T05:38:57.0000000Z",
+              "HardwareProperties": {
+                "MinimumHardware": [],
+                "RecommendedHardware": [],
+                "MinimumProcessor": "",
+                "RecommendedProcessor": "",
+                "MinimumGraphics": "",
+                "RecommendedGraphics": ""
+              },
+              "HardwareRequirements": [],
+              "HardwareWarningList": [],
+              "InstallationTerms": "InstallationTermsRestrictiveXbox",
+              "Packages": [
+                {
+                  "PackageFamilyName": null,
+                  "ContentId": "4a617fcb-3c09-4ac5-9c4c-dc46b5263876",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 0,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                {
+                  "PackageFamilyName": null,
+                  "ContentId": "4a617fcb-3c09-4ac5-9c4c-dc46b5263876",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 0,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                {
+                  "PackageFamilyName": "436609B6.FortniteClient_9ncxwbgmmv7m8",
+                  "ContentId": "21b40136-2fdb-404b-be34-4656e6a88528",
+                  "PlatformDependencies": [
+                    {
+                      "MaxTested": 2814750970478592,
+                      "MinVersion": 2814750970478592,
+                      "PlatformName": "Windows.Desktop"
+                    }
+                  ]
+                }
+              ],
+              "VersionString": "",
+              "SkuDisplayGroupIds": null,
+              "XboxXPA": true,
+              "BundledSkus": [],
+              "IsRepurchasable": false,
+              "SkuDisplayRank": 2,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [
+                "ede211be-dff4-45c4-b47a-367ac4c9af4c",
+                "dba4c141-9379-47b3-a822-b076b69a9a86"
+              ],
+              "AdditionalIdentifiers": [],
+              "IsTrial": true,
+              "IsPreOrder": false,
+              "IsBundle": false
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuGame;1",
+            "SkuId": "0004",
+            "SkuType": "trial",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details",
+                "License",
+                "Fulfill"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B1RKGZ2HLBQ4",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0004",
+              "DisplayRank": 0
+            },
+            {
+              "Actions": [
+                "License",
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9R5VNZBGMPN3",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Mobile"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Team"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Holographic"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.8828080"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Core"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T05:34:57.2166456Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0004",
+              "DisplayRank": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-10-03",
+    "base": "USD",
+    "quote": "INR",
+    "rate": 96.15
+  },
+  {
+    "date": "2026-10-03",
+    "base": "USD",
+    "quote": "JPY",
+    "rate": 157.91
+  },
+  {
+    "date": "2026-10-03",
+    "base": "USD",
+    "quote": "TRY",
+    "rate": 49.07
+  }
+]

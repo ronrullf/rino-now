@@ -1,0 +1,10 @@
+node_modules/
+.next/
+data/
+.env*
+!.env.example
+*.sqlite*
+*.tsbuildinfo
+playwright-report/
+test-results/
+docs/probe-output.txt

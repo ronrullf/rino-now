@@ -1,0 +1,531 @@
+{
+  "Products": [
+    {
+      "LastModifiedDate": "2026-10-02T16:37:20.7214400Z",
+      "LocalizedProperties": [
+        {
+          "ProductTitle": "Grand Theft Auto VI: Ultimate Edition",
+          "PublisherName": "Rockstar Games",
+          "Images": [
+            {
+              "FileId": "3005694076121565889",
+              "EISListingIdentifier": {
+                "ListingId": "3000000000000000001",
+                "AssetId": "1152922700025810472"
+              },
+              "BackgroundColor": "#FFFFFF",
+              "Caption": null,
+              "FileSizeInBytes": 3703063,
+              "ForegroundColor": "#FFFFFF",
+              "Height": 2160,
+              "ImagePositionInfo": "",
+              "ImagePurpose": "BoxArt",
+              "UnscaledImageSHA256Hash": "a6GqMuZXYxw9bMxePpqYN59BMeYGLw2xgXreNtJ6bYE=",
+              "Uri": "//store-images.s-microsoft.com/image/apps.41323.13733243493197803.a3412f95-9af3-40d3-b286-9282abd1d7a8.f5e16de0-9778-417b-a644-877be3227990",
+              "Width": 2160
+            }
+          ],
+          "Language": "en"
+        }
+      ],
+      "MarketProperties": [
+        {
+          "Markets": [
+            "US"
+          ],
+          "RelatedProducts": [
+            {
+              "RelatedProductId": "9PLVSSH8849X",
+              "RelationshipType": "Parent"
+            },
+            {
+              "RelatedProductId": "9NLKHF63GL52",
+              "RelationshipType": "Parent"
+            },
+            {
+              "RelatedProductId": "9NL3WWNZLZZN",
+              "RelationshipType": "Parent"
+            },
+            {
+              "RelatedProductId": "9NL3WWNZLZZN",
+              "RelationshipType": "Extends"
+            },
+            {
+              "RelatedProductId": "9PN4LLBR8RCH",
+              "RelationshipType": "Parent"
+            },
+            {
+              "RelatedProductId": "9P5FT3MT0M01",
+              "RelationshipType": "Parent"
+            }
+          ]
+        }
+      ],
+      "ProductASchema": "Product;3",
+      "ProductBSchema": "ProductGame;1",
+      "ProductId": "9NNZSNHLR63L",
+      "Properties": {
+        "Attributes": [
+          {
+            "Name": "SinglePlayer",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": [
+              "Xbox"
+            ],
+            "Group": null
+          },
+          {
+            "Name": "ConsoleGen9Optimized",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          },
+          {
+            "Name": "XboxLive",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          }
+        ],
+        "CanInstallToSDCard": true,
+        "Category": "Action & adventure",
+        "Categories": null,
+        "Subcategory": null,
+        "IsAccessible": false,
+        "IsDemo": false,
+        "IsLineOfBusinessApp": false,
+        "IsPublishedToLegacyWindowsPhoneStore": false,
+        "IsPublishedToLegacyWindowsStore": false,
+        "PackageFamilyName": "",
+        "PackageIdentityName": "",
+        "PublisherCertificateName": "",
+        "PublisherId": "31881420",
+        "SkuDisplayGroups": [
+          {
+            "Id": "01",
+            "Treatment": "MergeAvailabilities"
+          }
+        ],
+        "XboxLiveTier": "Full",
+        "XboxXPA": null,
+        "XboxCrossGenSetId": null,
+        "XboxConsoleGenOptimized": [
+          "ConsoleGen9"
+        ],
+        "XboxConsoleGenCompatible": [
+          "ConsoleGen9"
+        ],
+        "XboxLiveGoldRequired": false,
+        "ExtendedMetadata": "9NNZSNHLR63L_ed9bc12e-abf5-4bd7-98ab-fb14e92679c9",
+        "XBOX": {
+          "XboxProperties": "09b6f8e9-a076-4dd5-9057-726a61a4fa6f",
+          "SubmissionId": "1152921505701909740",
+          "XboxGamingMetadata": "9NNZSNHLR63L_ed9bc12e-abf5-4bd7-98ab-fb14e92679c9"
+        },
+        "ExtendedClientMetadata": {},
+        "OwnershipType": null,
+        "PdpBackgroundColor": "#FFFFFF",
+        "HasAddOns": true,
+        "RevisionId": "2026-10-02T16:37:23.9245976Z",
+        "ProductGroupId": "8f650646-a94d-4565-83ff-527e37c867b7",
+        "ProductGroupName": "Grand Theft Auto VI",
+        "IsPrivateBeforeDateHint": "2026-06-24T11:00:00.0000000Z"
+      },
+      "AlternateIds": [
+        {
+          "IdType": "LegacyXboxProductId",
+          "Value": "5a4e4e39-4e53-3048-c04c-5236334c6b00"
+        }
+      ],
+      "DomainDataVersion": null,
+      "IngestionSource": "DCE",
+      "IsMicrosoftProduct": false,
+      "PreferredSkuId": "0010",
+      "ProductType": "Game",
+      "MerchandizingTags": [],
+      "SandboxId": "RETAIL",
+      "ProductFamily": "Games",
+      "SchemaVersion": "3",
+      "IsSandboxedProduct": true,
+      "ProductKind": "Game",
+      "ProductPolicies": {},
+      "DisplaySkuAvailabilities": [
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-10-02T16:37:20.7214400Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "Grand Theft Auto VI: Ultimate Edition"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "FirstAvailableDate": "2026-11-19T05:00:00.0000000Z",
+                "SupportedLanguages": [
+                  "en",
+                  "ja",
+                  "ko",
+                  "pt-br",
+                  "es",
+                  "es-419",
+                  "zh-hans",
+                  "zh-hant",
+                  "fr",
+                  "de",
+                  "it",
+                  "pl",
+                  "ru",
+                  "ar",
+                  "cs",
+                  "da",
+                  "nl",
+                  "fi",
+                  "fr-ca",
+                  "el",
+                  "hu",
+                  "no",
+                  "sv",
+                  "tr",
+                  "uk",
+                  "pt"
+                ],
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "US"
+                ]
+              }
+            ],
+            "ProductId": "9NNZSNHLR63L",
+            "Properties": {
+              "EarlyAdopterEnrollmentUrl": null,
+              "FulfillmentData": null,
+              "FulfillmentType": null,
+              "FulfillmentPluginId": null,
+              "HasThirdPartyIAPs": false,
+              "LastUpdateDate": "2026-10-02T16:37:20.0000000Z",
+              "HardwareProperties": null,
+              "HardwareRequirements": [],
+              "HardwareWarningList": [],
+              "InstallationTerms": "InstallationTermsRestrictiveXbox",
+              "Packages": [],
+              "VersionString": "",
+              "SkuDisplayGroupIds": null,
+              "XboxXPA": false,
+              "BundledSkus": [
+                {
+                  "BigId": "9NL3WWNZLZZN",
+                  "DisplayRank": 0,
+                  "IsPrimary": true,
+                  "FulfillmentType": null
+                },
+                {
+                  "BigId": "9PN4LLBR8RCH",
+                  "DisplayRank": 1,
+                  "IsPrimary": false,
+                  "FulfillmentType": null
+                },
+                {
+                  "BigId": "9PLVSSH8849X",
+                  "DisplayRank": 2,
+                  "IsPrimary": false,
+                  "FulfillmentType": null
+                }
+              ],
+              "IsRepurchasable": false,
+              "SkuDisplayRank": 0,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [],
+              "AdditionalIdentifiers": [],
+              "IsTrial": false,
+              "IsPreOrder": true,
+              "IsBundle": true
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuGame;1",
+            "SkuId": "0017",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details",
+                "Purchase",
+                "Browse",
+                "Curate",
+                "Redeem"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "B3KF79QWQM83",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-11-19T04:59:59.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2026-06-25T04:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T16:35:09.6955961Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [
+                    "preordercontent"
+                  ],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": true,
+                  "ListPrice": 99.99,
+                  "MSRP": 99.99,
+                  "TaxType": "TaxesNotIncluded"
+                }
+              },
+              "Properties": {
+                "PreOrderReleaseDate": "2026-11-19T05:00:00.0000000Z",
+                "OriginalReleaseDate": "2026-11-19T05:00:00.0000000Z"
+              },
+              "SkuId": "0017",
+              "DisplayRank": 0,
+              "AlternateIds": [
+                {
+                  "IdType": "LegacyTokenIdentifier",
+                  "Value": "5a4e4e39-4e53-3048-c04c-5236334c6b00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-10-02T16:37:20.7214400Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "Grand Theft Auto VI: Ultimate Edition"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "FirstAvailableDate": "2026-11-19T05:00:00.0000000Z",
+                "SupportedLanguages": [
+                  "en",
+                  "ja",
+                  "ko",
+                  "pt-br",
+                  "es",
+                  "es-419",
+                  "zh-hans",
+                  "zh-hant",
+                  "fr",
+                  "de",
+                  "it",
+                  "pl",
+                  "ru",
+                  "ar",
+                  "cs",
+                  "da",
+                  "nl",
+                  "fi",
+                  "fr-ca",
+                  "el",
+                  "hu",
+                  "no",
+                  "sv",
+                  "tr",
+                  "uk",
+                  "pt"
+                ],
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "US"
+                ]
+              }
+            ],
+            "ProductId": "9NNZSNHLR63L",
+            "Properties": {
+              "EarlyAdopterEnrollmentUrl": null,
+              "FulfillmentData": null,
+              "FulfillmentType": null,
+              "FulfillmentPluginId": null,
+              "HasThirdPartyIAPs": false,
+              "LastUpdateDate": "2026-10-02T16:37:20.0000000Z",
+              "HardwareProperties": null,
+              "HardwareRequirements": [],
+              "HardwareWarningList": [],
+              "InstallationTerms": "InstallationTermsRestrictiveXbox",
+              "Packages": [],
+              "VersionString": "",
+              "SkuDisplayGroupIds": [
+                "01"
+              ],
+              "XboxXPA": false,
+              "BundledSkus": [
+                {
+                  "BigId": "9NL3WWNZLZZN",
+                  "DisplayRank": 0,
+                  "IsPrimary": true,
+                  "FulfillmentType": null
+                },
+                {
+                  "BigId": "9PN4LLBR8RCH",
+                  "DisplayRank": 1,
+                  "IsPrimary": false,
+                  "FulfillmentType": null
+                },
+                {
+                  "BigId": "9PLVSSH8849X",
+                  "DisplayRank": 2,
+                  "IsPrimary": false,
+                  "FulfillmentType": null
+                }
+              ],
+              "IsRepurchasable": false,
+              "SkuDisplayRank": 1,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [],
+              "AdditionalIdentifiers": [],
+              "IsTrial": false,
+              "IsPreOrder": false,
+              "IsBundle": true
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuGame;1",
+            "SkuId": "0010",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9N1LVD78477K",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Mobile"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Team"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Holographic"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.8828080"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Core"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T16:35:09.6955961Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0010",
+              "DisplayRank": 0
+            },
+            {
+              "Actions": [
+                "Details",
+                "License"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityGame;1",
+              "AvailabilityId": "9NS6FGTFPWHT",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "2026-11-19T04:59:59.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2026-06-25T04:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-10-02T16:35:09.6955961Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0010",
+              "DisplayRank": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

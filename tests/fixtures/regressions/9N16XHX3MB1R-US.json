@@ -1,0 +1,354 @@
+{
+  "Products": [
+    {
+      "LastModifiedDate": "2026-09-30T21:36:11.3875256Z",
+      "LocalizedProperties": [
+        {
+          "ProductTitle": "Fortnite - 800 V-Bucks",
+          "PublisherName": "Epic Games Inc.",
+          "Images": [
+            {
+              "FileId": "3057582353381300348",
+              "EISListingIdentifier": null,
+              "BackgroundColor": null,
+              "Caption": null,
+              "FileSizeInBytes": 2330560,
+              "ForegroundColor": null,
+              "Height": 2160,
+              "ImagePositionInfo": null,
+              "ImagePurpose": "Poster",
+              "UnscaledImageSHA256Hash": "9efabgOIosKV8s+Qyzc3GC2iDo9B504I8YesMJ78how=",
+              "Uri": "//store-images.s-microsoft.com/image/apps.59381.13647357056546542.d425c305-fd0c-4038-926e-ed8dfdb790e7.019c6d42-1382-4811-9ef8-859f1bd9ad2e",
+              "Width": 1440
+            }
+          ],
+          "Language": "en-us"
+        }
+      ],
+      "MarketProperties": [
+        {
+          "Markets": [
+            "US"
+          ],
+          "RelatedProducts": [
+            {
+              "RelatedProductId": "BT5P2X999VH2",
+              "RelationshipType": "addOnParent"
+            },
+            {
+              "RelatedProductId": "BT5P2X999VH2",
+              "RelationshipType": "SellableBy"
+            }
+          ]
+        }
+      ],
+      "ProductASchema": "Product;3",
+      "ProductBSchema": "ProductAddOn;3",
+      "ProductId": "9N16XHX3MB1R",
+      "Properties": {
+        "Category": "Action & adventure",
+        "Categories": [
+          "Action & adventure",
+          "Other",
+          "Shooter",
+          "Simulation",
+          "Strategy"
+        ],
+        "IsOmexProduct": false,
+        "PackageFamilyName": "436609B6.Fortnite-800V-Bucks_9ncxwbgmmv7m8",
+        "PackageIdentityName": "436609B6.Fortnite-800V-Bucks",
+        "PrimaryCategory": "Game",
+        "PublisherCertificateName": "CN=490B3D56-2210-4C4C-9B45-E8C720DB34B2",
+        "PublisherId": "25364920",
+        "Subcategory": "",
+        "XboxXPA": null,
+        "Attributes": [
+          {
+            "Name": "BroadcastSupport",
+            "Minimum": null,
+            "Maximum": null,
+            "ApplicablePlatforms": null,
+            "Group": null
+          }
+        ],
+        "SkuDisplayGroups": [
+          {
+            "Id": "01",
+            "Treatment": "MergeAvailabilities"
+          }
+        ],
+        "XboxCrossGenSetId": null,
+        "XboxConsoleGenOptimized": null,
+        "XboxConsoleGenCompatible": null,
+        "XboxLiveGoldRequired": false,
+        "XBOX": {
+          "XboxProperties": "4c8b0f82-dac3-4583-9127-b627a040c829",
+          "SubmissionId": "1152921505702015001"
+        },
+        "ExtendedClientMetadata": {},
+        "OwnershipType": null,
+        "PdpBackgroundColor": null,
+        "HasAddOns": null,
+        "RevisionId": "2026-09-30T21:36:14.6688279Z",
+        "EntitlementProperties": [],
+        "ProductGroupId": "ef24de27-7970-481f-b036-47c9566c63c5",
+        "ProductGroupName": "Fortnite",
+        "InAppOfferToken": "Fortnite - 800 VBUCKS PACK"
+      },
+      "AlternateIds": [
+        {
+          "IdType": "LegacyWindowsStoreProductId",
+          "Value": "f51d8aaf-ab77-4504-8063-df2e75da2e8f"
+        },
+        {
+          "IdType": "LegacyWindowsStoreParentProductId",
+          "Value": "f51d8aaf-ab77-4504-8063-df2e75da2e8f"
+        },
+        {
+          "IdType": "LegacyWindowsPhoneProductId",
+          "Value": "bf5fbf34-d1c7-47d8-8682-40b3850e354c"
+        },
+        {
+          "IdType": "LegacyWindowsPhoneParentProductId",
+          "Value": "bf5fbf34-d1c7-47d8-8682-40b3850e354c"
+        },
+        {
+          "IdType": "LegacyXboxProductId",
+          "Value": "36314e39-4858-3058-c033-4d4231522b00"
+        },
+        {
+          "IdType": "InAppOfferToken",
+          "Value": "Fortnite - 800 VBUCKS PACK"
+        }
+      ],
+      "DomainDataVersion": null,
+      "IngestionSource": "DCE",
+      "IsMicrosoftProduct": false,
+      "PreferredSkuId": "0010",
+      "ProductType": "Consumable",
+      "MerchandizingTags": [],
+      "SandboxId": "RETAIL",
+      "ProductFamily": "Games",
+      "SchemaVersion": "3",
+      "IsSandboxedProduct": true,
+      "ProductKind": "Consumable",
+      "ProductPolicies": {},
+      "DisplaySkuAvailabilities": [
+        {
+          "Sku": {
+            "LastModifiedDate": "2026-09-30T21:36:11.3875256Z",
+            "LocalizedProperties": [
+              {
+                "SkuTitle": "Fortnite - 800 V-Bucks"
+              }
+            ],
+            "MarketProperties": [
+              {
+                "SupportedLanguages": [
+                  "ar",
+                  "da",
+                  "nl",
+                  "en",
+                  "en-us",
+                  "fi",
+                  "fr",
+                  "de",
+                  "it",
+                  "ja",
+                  "ko",
+                  "nb",
+                  "pl",
+                  "pt",
+                  "ru",
+                  "es",
+                  "es-mx",
+                  "sv",
+                  "tr"
+                ],
+                "FirstAvailableDate": "2026-03-19T06:00:00.0000000Z",
+                "PackageIds": null,
+                "PIFilter": null,
+                "Markets": [
+                  "US"
+                ]
+              }
+            ],
+            "ProductId": "9N16XHX3MB1R",
+            "Properties": {
+              "ApplicableLegacyPlatforms": [
+                {
+                  "LegacyPlatformName": "Windows.WindowsPhone8x"
+                },
+                {
+                  "LegacyPlatformName": "Windows.Windows8x"
+                }
+              ],
+              "CustomDeveloperData": "",
+              "MagazineIssueData": null,
+              "Packages": [],
+              "ConsumableQuantity": 1,
+              "FulfillmentData": null,
+              "FulfillmentType": null,
+              "FulfillmentPluginId": null,
+              "XboxXPA": false,
+              "HardwareProperties": null,
+              "HardwareRequirements": null,
+              "HardwareWarningList": null,
+              "SkuDisplayGroupIds": [
+                "01"
+              ],
+              "EarlyAdopterEnrollmentUrl": null,
+              "HasThirdPartyIAPs": false,
+              "InstallationTerms": "InstallationTermsUnlimited",
+              "LastUpdateDate": "2026-09-30T21:36:11.0000000Z",
+              "VersionString": null,
+              "BundledSkus": null,
+              "IsRepurchasable": true,
+              "SkuDisplayRank": 0,
+              "DisplayPhysicalStoreInventory": null,
+              "VisibleToB2BServiceIds": [
+                "ede211be-dff4-45c4-b47a-367ac4c9af4c",
+                "dba4c141-9379-47b3-a822-b076b69a9a86"
+              ],
+              "AdditionalIdentifiers": [],
+              "IsTrial": false,
+              "IsPreOrder": false,
+              "IsBundle": false
+            },
+            "SkuASchema": "Sku;3",
+            "SkuBSchema": "SkuAddOn;3",
+            "SkuId": "0010",
+            "SkuType": "full",
+            "RecurrencePolicy": null,
+            "SubscriptionPolicyId": null
+          },
+          "Availabilities": [
+            {
+              "Actions": [
+                "Details",
+                "Purchase",
+                "Browse",
+                "Curate",
+                "Redeem"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityAddOn;3",
+              "AvailabilityId": "9RBVQQLWM49M",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Desktop"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Xbox"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "2026-03-19T06:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-09-30T21:35:35.1769268Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "PIFilter": {
+                  "ExclusionProperties": [],
+                  "InclusionProperties": []
+                },
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 8.99,
+                  "MSRP": 8.99,
+                  "TaxType": "TaxesNotIncluded"
+                }
+              },
+              "Properties": {
+                "OriginalReleaseDate": "2026-03-19T06:00:00.0000000Z"
+              },
+              "SkuId": "0010",
+              "DisplayRank": 0,
+              "AlternateIds": [
+                {
+                  "IdType": "LegacyTokenIdentifier",
+                  "Value": "36314e39-4858-3058-c033-4d4231522b00"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                "Details"
+              ],
+              "AvailabilityASchema": "Availability;3",
+              "AvailabilityBSchema": "AvailabilityAddOn;3",
+              "AvailabilityId": "9V8JX2SD4R76",
+              "Conditions": {
+                "ClientConditions": {
+                  "AllowedPlatforms": [
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Mobile"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Team"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Holographic"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.8828080"
+                    },
+                    {
+                      "MaxVersion": 2147483647,
+                      "MinVersion": 0,
+                      "PlatformName": "Windows.Core"
+                    }
+                  ]
+                },
+                "EndDate": "9998-12-30T00:00:00.0000000Z",
+                "ResourceSetIds": [
+                  "1"
+                ],
+                "StartDate": "1753-01-01T00:00:00.0000000Z"
+              },
+              "LastModifiedDate": "2026-09-30T21:35:35.1769268Z",
+              "Markets": [
+                "US"
+              ],
+              "OrderManagementData": {
+                "GrantedEntitlementKeys": [],
+                "Price": {
+                  "CurrencyCode": "USD",
+                  "IsPIRequired": false,
+                  "ListPrice": 0,
+                  "MSRP": 0,
+                  "TaxType": ""
+                }
+              },
+              "Properties": {},
+              "SkuId": "0010",
+              "DisplayRank": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
