@@ -3,6 +3,7 @@ import { productId } from "@/lib/security/inputs";
 import { checkOrigin } from "@/lib/security/origin";
 import { comparisons } from "@/lib/services/comparison";
 export const runtime = "nodejs";
+export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 export async function POST(
   request: Request,

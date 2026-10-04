@@ -56,8 +56,8 @@ export function Watchlist() {
           <p className="eyebrow mb-3">Your saved selections</p>
           <h1 className="text-3xl font-bold tracking-tight">Watchlist</h1>
           <p className="mt-3 text-sm text-muted">
-            Exact editions worth keeping an eye on. Prices shown from your local
-            cache.
+            Exact editions worth keeping an eye on. Saved prices are references;
+            open a product to refresh its comparison.
           </p>
         </div>
         <Link href="/" className="btn btn-primary">

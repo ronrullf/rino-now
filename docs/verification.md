@@ -40,3 +40,11 @@ The production app was left running at http://127.0.0.1:3000 in live mode. It wa
 - Home shows the top six percentage price gaps among seven curated, recognized games: Forza Horizon 5, DIRT 5, GTA V, Minecraft, Elden Ring, Red Dead Redemption 2 and Hogwarts Legacy. It compares the highest and lowest eligible regional USD prices. This is an editorial selection, not a download-count leaderboard or a market-wide ranking. Stale prices, failed refreshes, mismatched entitlements and fewer than two eligible countries are excluded.
 - Validation: 63 tests passed; lint, TypeScript and production build passed. Browser checked live home ranking (7/7 games checked, six displayed), DLC typo search `fortnit`, Games abbreviation `GTA`, populated country price previews, top winner link, and 390px search/product layouts without horizontal overflow.
 - Existing browser automation suite was not rerun for this change; the flows above were checked with the interactive browser tool.
+
+## Vercel compatibility repair — 2026-10-03
+
+- Reproduced HTTP 500 / INTERNAL_ERROR at the production health endpoint before the repair. The original default opened a writable local SQLite file in the deployment directory, incompatible with Vercel's read-only filesystem.
+- Added automatic Vercel detection: use in-memory SQLite for disposable provider caches even if DATABASE_PATH is configured to a local directory. Include migration SQL in every API function trace; verified all generated API traces contain it.
+- Persist watchlist and recents in browser localStorage in Vercel mode. Preserve the existing local SQLite behavior outside Vercel. Browser saved data is device/domain-specific and not automatically migrated from the desktop database.
+- Accept trusted production/preview deployment origins (or explicitly configured APP_ORIGIN) for refresh actions. Continue rejecting mismatched Origin/Host and arbitrary origins. Set upstream-facing API duration to 60 seconds and log unexpected server error details server-side.
+- Validation: 70 tests passed; lint and production build/TypeScript passed. Live local Vercel-mode health, GTA search and V-Bucks regional prices verified. Browser save, refresh, watchlist and retained save after full server restart verified. No temporary database was used for personal state.

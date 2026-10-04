@@ -105,4 +105,17 @@ For a simple consistent backup:
 
 Restore only with the application stopped. Move the existing database and sidecars aside, restore the matching backup set to the configured path, then start the app. Never copy only the main file from a running WAL database. For online backups, use better-sqlite3's SQLite backup API instead.
 
-Run remotely only on a persistent Node host with a writable persistent volume and an authenticated reverse proxy or private-network access control covering **all pages and APIs**. Update `APP_ORIGIN` and preserve Host/Origin through the proxy. Keep the Node service bound to loopback behind that proxy. Do not deploy this SQLite app to ephemeral serverless storage or Edge workers. No public deployment was performed.
+Run remotely only on a persistent Node host with a writable persistent volume and an authenticated reverse proxy or private-network access control covering **all pages and APIs**. Update `APP_ORIGIN` and preserve Host/Origin through the proxy. Keep the Node service bound to loopback behind that proxy. On Vercel, use the serverless mode described below. Edge workers are not supported.
+
+## Vercel deployment
+
+Vercel is detected automatically (`VERCEL=1`). Its application directory is read-only: the app therefore uses in-memory SQLite only as a disposable price/search cache. A copied local `DATABASE_PATH` is ignored on Vercel. Migrations are included in API function bundles. No catalog key or external database is needed for live search and prices.
+
+1. Import this repository using the Next.js preset and Node 24.x. Use the default install/build commands.
+2. Keep `DATA_MODE=live`, `FX_PROVIDER=frankfurter`, and `FX_FALLBACK_PROVIDER=none` (these are defaults). Do not set fixture mode.
+3. Vercel deployment and production domains are accepted automatically for refresh actions. For a custom domain set `APP_ORIGIN=https://your-domain.example` with no path. Remove any copied localhost `APP_ORIGIN`.
+4. Redeploy after changing environment variables. `/api/health` should return `ready: true` and `storage: "browser-with-ephemeral-cache"`.
+
+On Vercel, watchlist and recent selections are stored in localStorage in the current browser and domain. They survive function restarts but do not sync between devices or domains, and clearing site data removes them. Existing local SQLite watchlists are not uploaded or migrated automatically. Saved watchlist prices are labelled references; open a product to obtain a current comparison. Server watchlist mutations are disabled in this mode so temporary instance state cannot be mistaken for durable storage. Local hosting continues to use the persistent SQLite database.
+
+Cold functions fetch their own regional prices; caches and request limits are per instance rather than shared globally. API routes that contact upstream services allow 60 seconds. A shared cloud database would be required for cross-device saved lists and shared cache/cooldowns. Protect an internal Vercel deployment with your chosen access control; the app itself does not provide login. Unexpected API errors are recorded in function logs, while browsers receive a generic error without server paths.

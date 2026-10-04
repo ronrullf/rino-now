@@ -18,6 +18,16 @@ export async function respond<T>(run: () => Promise<T> | T) {
       { headers: { "Cache-Control": "no-store" } },
     );
   } catch (e) {
+    // Keep details in server logs, never return filesystem paths or credentials.
+    if (!(e instanceof AppError) && !(e instanceof ZodError))
+      console.error(
+        "[api] Unexpected server failure",
+        e instanceof Error
+          ? e.name +
+              ": " +
+              e.message.replace(/https?:\/\/[^\s]+/g, "[redacted URL]")
+          : "Unknown error",
+      );
     const error =
       e instanceof AppError
         ? e

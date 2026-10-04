@@ -3,6 +3,7 @@ import { searchQuery } from "@/lib/security/inputs";
 import { search } from "@/lib/services/search";
 import { AppError } from "@/lib/errors";
 export const runtime = "nodejs";
+export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 export function GET(request: Request) {
   return respond(() => {

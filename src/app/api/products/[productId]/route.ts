@@ -2,6 +2,7 @@ import { respond } from "@/lib/api";
 import { productId } from "@/lib/security/inputs";
 import { comparisons } from "@/lib/services/comparison";
 export const runtime = "nodejs";
+export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 export async function GET(
   request: Request,

@@ -81,12 +81,12 @@ export function SearchWorkspace() {
     ) {
       try {
         const id = productId(query);
-        void fetch("/api/recent", {
+        void api("/api/recent", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ productId: id }),
           keepalive: true,
-        });
+        }).catch(() => {});
         router.push(`/product/${id}`);
       } catch (e) {
         setError((e as Error).message);
@@ -351,7 +351,7 @@ export function SearchWorkspace() {
                 <ArrowRight size={16} />
               </Link>
               <p className="mt-auto pt-6 text-xs text-muted">
-                Saved locally · Private to this workspace
+                Saved on this device or workspace
               </p>
             </section>
           </div>

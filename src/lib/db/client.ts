@@ -6,7 +6,7 @@ const globalDb = globalThis as typeof globalThis & {
 };
 export function repository() {
   return (globalDb.comparatorDb ??= new Repository(
-    config.DATA_MODE === "fixture"
+    config.DATABASE_PATH !== ":memory:" && config.DATA_MODE === "fixture"
       ? config.DATABASE_PATH + ".fixture"
       : config.DATABASE_PATH,
   ));
