@@ -86,3 +86,39 @@ describe("home savings ranking", () => {
     expect(r.differencePercent).toBe("75");
   });
 });
+
+it("ranks DLCs independently and applies the same comparability rules", () => {
+  const game = comparison("G", "100", "1");
+  const addon = comparison("D", "40", "10");
+  addon.product.type = "dlc";
+  const stale = comparison("S", "50", "1");
+  stale.product.type = "dlc";
+  stale.regions[0].stale = true;
+  expect(
+    rankOpportunities([game, addon, stale], "dlc").map((r) => r.product.id),
+  ).toEqual(["D"]);
+  expect(rankOpportunities([addon], "dlc")[0].differencePercent).toBe("75");
+  expect(
+    rankOpportunities([game, addon], "games").map((r) => r.product.id),
+  ).toEqual(["G"]);
+});
+it("returns all ranked candidates so the UI can expand beyond six", () => {
+  const results = rankOpportunities(
+    Array.from({ length: 10 }, (_, i) =>
+      comparison(String(i), "100", String(i + 1)),
+    ),
+  );
+  expect(results).toHaveLength(10);
+  expect(results.map((r) => r.product.id)).toEqual([
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ]);
+});

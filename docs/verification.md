@@ -48,3 +48,9 @@ The production app was left running at http://127.0.0.1:3000 in live mode. It wa
 - Persist watchlist and recents in browser localStorage in Vercel mode. Preserve the existing local SQLite behavior outside Vercel. Browser saved data is device/domain-specific and not automatically migrated from the desktop database.
 - Accept trusted production/preview deployment origins (or explicitly configured APP_ORIGIN) for refresh actions. Continue rejecting mismatched Origin/Host and arbitrary origins. Set upstream-facing API duration to 60 seconds and log unexpected server error details server-side.
 - Validation: 70 tests passed; lint and production build/TypeScript passed. Live local Vercel-mode health, GTA search and V-Bucks regional prices verified. Browser save, refresh, watchlist and retained save after full server restart verified. No temporary database was used for personal state.
+
+## DLC savings and expandable rankings — 2026-10-03
+
+- Added a separate DLC/add-on savings selection and expanded the curated games pool to ten titles. Eight recognizable add-ons are checked; only eligible fresh comparisons with at least two markets are ranked. These are curated selections, not verified sales/download rankings or guaranteed gross profit.
+- Both categories initially show six cards, with accessible arrow buttons to show all eligible items and collapse again. Cards retain cheapest-country prices, USD differences and regional store links.
+- Validation: 72 tests, lint and production build/TypeScript passed. Live local Vercel-mode API returned ten games and seven eligible DLCs without warnings. Browser verified game expansion/collapse and DLC expansion with real regional prices.

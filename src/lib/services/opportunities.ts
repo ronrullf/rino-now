@@ -4,6 +4,7 @@ import { config } from "../config";
 import {
   rankOpportunities,
   type OpportunitiesPage,
+  type OpportunityKind,
 } from "../pricing/opportunities";
 import type { Comparison } from "../contracts";
 // Editorial selection of recognizable games, not a download-count ranking.
@@ -16,15 +17,30 @@ export const featuredGames = [
   { id: "9P3J32CTXLRZ", title: "ELDEN RING" },
   { id: "9N2ZDN7NWQKV", title: "Red Dead Redemption 2" },
   { id: "9MT5NJ5W7B8Z", title: "Hogwarts Legacy" },
+  { id: "9N7JCPPCPN37", title: "Resident Evil 4" },
+  { id: "9P2N57MC619K", title: "Sea of Thieves: 2026 Edition" },
+  { id: "9NCJSXWZTP88", title: "Starfield" },
 ];
-let flight: Promise<OpportunitiesPage> | null = null;
-export function opportunities(): Promise<OpportunitiesPage> {
-  if (flight) return flight;
-  flight = (async () => {
+export const featuredAddons = [
+  { id: "9PNSZ7GMWCQZ", title: "Forza Horizon 5 add-on" },
+  { id: "9NCJB85WM01G", title: "Fortnite - Mainframe Break Pack" },
+  { id: "9N16XHX3MB1R", title: "Fortnite - 800 V-Bucks" },
+  { id: "9NKV4GWZZ2SS", title: "Fortnite - 2,400 V-Bucks" },
+  { id: "C22JNR2SLS6T", title: "GTA Online: Criminal Enterprise Starter Pack" },
+  { id: "9PMPZZLKQM43", title: "ELDEN RING Shadow of the Erdtree" },
+  { id: "9MVH0ZCSTTQP", title: "Hogwarts Legacy: Dark Arts Pack" },
+  { id: "9PD2M9470N1P", title: "Resident Evil 4 - Separate Ways" },
+];
+const flights = new Map<OpportunityKind, Promise<OpportunitiesPage>>();
+export function opportunities(
+  kind: OpportunityKind = "games",
+): Promise<OpportunitiesPage> {
+  const existing = flights.get(kind);
+  if (existing) return existing;
+  const flight = (async () => {
+    const featured = kind === "dlc" ? featuredAddons : featuredGames;
     const selected =
-      config.DATA_MODE === "fixture"
-        ? featuredGames.slice(0, 1)
-        : featuredGames;
+      config.DATA_MODE === "fixture" ? featured.slice(0, 1) : featured;
     const results: Comparison[] = [];
     let index = 0,
       failures = 0;
@@ -40,17 +56,18 @@ export function opportunities(): Promise<OpportunitiesPage> {
     }
     await Promise.all([worker(), worker()]);
     return {
-      items: rankOpportunities(results),
+      items: rankOpportunities(results, kind),
       checked: results.length,
       selected: selected.length,
       warnings: failures
         ? [
-            "Some selected games could not be checked. Rankings cover only successful comparisons.",
+            "Some selected products could not be checked. Rankings cover only successful comparisons.",
           ]
         : [],
     };
   })().finally(() => {
-    flight = null;
+    flights.delete(kind);
   });
+  flights.set(kind, flight);
   return flight;
 }

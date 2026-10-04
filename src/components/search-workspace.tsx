@@ -291,7 +291,9 @@ export function SearchWorkspace() {
           </p>
         )}
       </div>
-      {!query && kind === "games" && <TopOpportunities />}
+      {!query && (
+        <TopOpportunities key={kind} kind={kind === "dlc" ? "dlc" : "games"} />
+      )}
       {!result && !loading && !query && (
         <>
           <div className="mt-9 grid gap-5 lg:grid-cols-[1.5fr_1fr]">

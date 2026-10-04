@@ -1,5 +1,6 @@
 import { Decimal } from "decimal.js";
 import type { Comparison, Product, RegionResult } from "../contracts";
+export type OpportunityKind = "games" | "dlc";
 export type Opportunity = {
   product: Product;
   cheapest: RegionResult;
@@ -15,10 +16,18 @@ export type OpportunitiesPage = {
   selected: number;
   warnings: string[];
 };
-export function rankOpportunities(comparisons: Comparison[]): Opportunity[] {
+export function rankOpportunities(
+  comparisons: Comparison[],
+  kind: OpportunityKind = "games",
+): Opportunity[] {
   const items: Opportunity[] = [];
   for (const c of comparisons) {
-    if (!["game", "bundle", "edition"].includes(c.product.type)) continue;
+    if (
+      kind === "dlc"
+        ? c.product.type !== "dlc"
+        : !["game", "bundle", "edition"].includes(c.product.type)
+    )
+      continue;
     const eligible = c.regions
       .filter(
         (r) => r.rankEligible && !r.stale && !r.refreshError && r.usd !== null,
@@ -46,12 +55,10 @@ export function rankOpportunities(comparisons: Comparison[]): Opportunity[] {
       comparedMarkets: eligible.length,
     });
   }
-  return items
-    .sort(
-      (a, b) =>
-        new Decimal(b.differencePercent).cmp(a.differencePercent) ||
-        new Decimal(b.differenceUsd).cmp(a.differenceUsd) ||
-        a.product.id.localeCompare(b.product.id),
-    )
-    .slice(0, 6);
+  return items.sort(
+    (a, b) =>
+      new Decimal(b.differencePercent).cmp(a.differencePercent) ||
+      new Decimal(b.differenceUsd).cmp(a.differenceUsd) ||
+      a.product.id.localeCompare(b.product.id),
+  );
 }
