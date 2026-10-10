@@ -19,7 +19,7 @@ results.push({
   count: search.products.length,
 });
 for (const id of ["9NKX70BBCDRN", "9PNSZ7GMWCQZ", "9N16XHX3MB1R", "9NCJB85WM01G", "9NNZSNHLR63L", "9PJGM0T0827V", "C22JNR2SLS6T"]) {
-  const data = await get(`/api/products/${id}`);
+  const data = await get(`/api/products/${id}?fresh=1`);
   assert.equal(data.product.id, id);
   assert.equal(data.demo, false);
   assert.deepEqual(

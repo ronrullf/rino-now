@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
-import { eq, desc, like, sql } from "drizzle-orm";
+import { eq, and, desc, like, sql } from "drizzle-orm";
 import { mkdirSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import * as t from "./schema";
@@ -12,6 +12,8 @@ import {
   type Snapshot,
   type FxSnapshot,
   type SearchPage,
+  type PriceHistoryEntry,
+  type AllTimeLow,
 } from "../contracts";
 import { AppError } from "../errors";
 export class Repository {
@@ -41,6 +43,19 @@ export class Repository {
         );
         this.sqlite.pragma("user_version = 2");
       })();
+    this.sqlite.exec(
+      `CREATE TABLE IF NOT EXISTS price_history(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        product_id TEXT NOT NULL REFERENCES products(product_id),
+        market TEXT NOT NULL,
+        amount TEXT NOT NULL,
+        currency TEXT NOT NULL,
+        usd TEXT,
+        recorded_at TEXT NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS price_history_product_idx ON price_history(product_id, market);
+      CREATE INDEX IF NOT EXISTS price_history_recorded_idx ON price_history(recorded_at);`,
+    );
     if (Number(version) > 2) throw Error("Database schema newer than this app");
     this.db = drizzle(this.sqlite);
   }
@@ -150,7 +165,7 @@ export class Repository {
       .run();
     this.db
       .delete(t.searchCache)
-      .where(sql`${t.searchCache.expiresAt} < ${Date.now() - 86400000}`)
+      .where(sql`${t.searchCache.expiresAt} < ${expiresAt - 86400000}`)
       .run();
   }
   searchCandidates() {
@@ -258,6 +273,71 @@ export class Repository {
       .where(eq(t.refreshCooldown.productId, id))
       .get();
     return r ? new Date(r.attemptAt + cooldown).toISOString() : null;
+  }
+  recordPriceHistory(
+    productId: string,
+    market: string,
+    amount: string,
+    currency: string,
+    usd: string | null,
+    recordedAt: string,
+  ) {
+    const latest = this.db
+      .select()
+      .from(t.priceHistory)
+      .where(
+        and(
+          eq(t.priceHistory.productId, productId),
+          eq(t.priceHistory.market, market),
+        ),
+      )
+      .orderBy(desc(t.priceHistory.recordedAt))
+      .limit(1)
+      .get();
+    if (
+      !latest ||
+      latest.amount !== amount ||
+      Date.parse(recordedAt) - Date.parse(latest.recordedAt) > 86400000
+    ) {
+      this.db
+        .insert(t.priceHistory)
+        .values({
+          productId,
+          market,
+          amount,
+          currency,
+          usd,
+          recordedAt,
+        })
+        .run();
+    }
+  }
+  priceHistory(productId: string): PriceHistoryEntry[] {
+    return this.db
+      .select()
+      .from(t.priceHistory)
+      .where(eq(t.priceHistory.productId, productId))
+      .orderBy(desc(t.priceHistory.recordedAt))
+      .limit(50)
+      .all() as PriceHistoryEntry[];
+  }
+  allTimeLows(
+    productId: string,
+  ): Partial<Record<Snapshot["market"], AllTimeLow>> {
+    const history = this.priceHistory(productId);
+    const result: Partial<Record<Snapshot["market"], AllTimeLow>> = {};
+    for (const entry of history) {
+      const existing = result[entry.market];
+      if (!existing || Number(entry.amount) < Number(existing.amount)) {
+        result[entry.market] = {
+          amount: entry.amount,
+          currency: entry.currency,
+          usd: entry.usd,
+          recordedAt: entry.recordedAt,
+        };
+      }
+    }
+    return result;
   }
   health() {
     return this.db.get(sql`SELECT 1 AS ready`);

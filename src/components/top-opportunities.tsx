@@ -5,6 +5,7 @@ import {
   TrendingDown,
   ChevronDown,
   ChevronUp,
+  ShoppingBag,
 } from "lucide-react";
 import type {
   OpportunitiesPage,
@@ -15,6 +16,12 @@ import { currency } from "@/lib/pricing/format";
 import { api } from "./client-api";
 import { Cover } from "./cover";
 import { ProductLink } from "./product-link";
+import {
+  addToBasket,
+  removeFromBasket,
+  isInBasket,
+  subscribeBasket,
+} from "@/lib/basket-store";
 export function TopOpportunities({
   kind = "games",
 }: {
@@ -26,6 +33,21 @@ export function TopOpportunities({
   const [data, setData] = useState<OpportunitiesPage | null>(null);
   const [error, setError] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  const [basketIds, setBasketIds] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    function updateBasketState() {
+      if (data?.items) {
+        const inBasket = new Set<string>();
+        for (const it of data.items) {
+          if (isInBasket(it.product.id)) inBasket.add(it.product.id);
+        }
+        setBasketIds(inBasket);
+      }
+    }
+    updateBasketState();
+    return subscribeBasket(updateBasketState);
+  }, [data]);
   useEffect(() => {
     const controller = new AbortController();
     setError(false);
@@ -164,6 +186,28 @@ export function TopOpportunities({
                       <ProductLink id={item.product.id} className="btn flex-1">
                         Compare prices
                       </ProductLink>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (basketIds.has(item.product.id)) {
+                            removeFromBasket(item.product.id);
+                          } else {
+                            addToBasket(item.product);
+                          }
+                        }}
+                        className={`btn !px-3 ${
+                          basketIds.has(item.product.id)
+                            ? "border-brand bg-brand-soft text-brand font-semibold"
+                            : ""
+                        }`}
+                        title={
+                          basketIds.has(item.product.id)
+                            ? "In purchasing basket"
+                            : "Add to purchasing basket"
+                        }
+                      >
+                        <ShoppingBag size={15} />
+                      </button>
                       <a
                         href={item.cheapest.storeUrl}
                         target="_blank"

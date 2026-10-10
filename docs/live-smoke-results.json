@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-10-03T16:15:25.487Z",
+  "executedAt": "2026-10-10T14:12:57.989Z",
   "results": [
     {
       "capability": "title search",
-      "source": "live",
-      "count": 10
+      "source": "cache",
+      "count": 20
     },
     {
       "capability": "lookup and warm cache",
@@ -17,7 +17,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -25,7 +25,7 @@
           "rankEligible": true,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -33,7 +33,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -41,7 +41,7 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [
@@ -59,7 +59,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -67,7 +67,7 @@
           "rankEligible": true,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -75,7 +75,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -83,7 +83,7 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [
@@ -101,7 +101,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -109,7 +109,7 @@
           "rankEligible": false,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -117,7 +117,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -125,7 +125,7 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [
@@ -143,7 +143,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -151,7 +151,7 @@
           "rankEligible": true,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -159,7 +159,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -167,7 +167,7 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [
@@ -185,7 +185,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -193,7 +193,7 @@
           "rankEligible": true,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -201,7 +201,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -209,10 +209,11 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [
+        "IN",
         "JP"
       ]
     },
@@ -227,7 +228,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -235,7 +236,7 @@
           "rankEligible": true,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -243,7 +244,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -251,7 +252,7 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [
@@ -269,7 +270,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "TR",
@@ -277,7 +278,7 @@
           "rankEligible": true,
           "currency": "TRY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "IN",
@@ -285,7 +286,7 @@
           "rankEligible": true,
           "currency": "INR",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         },
         {
           "market": "JP",
@@ -293,7 +294,7 @@
           "rankEligible": true,
           "currency": "JPY",
           "fxProvider": "Frankfurter",
-          "fxDate": "2026-10-03"
+          "fxDate": "2026-10-10"
         }
       ],
       "winners": [

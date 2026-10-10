@@ -8,6 +8,8 @@ export default defineConfig([
     ".next/**",
     "node_modules/**",
     "docs/**",
+    "test-results/**",
+    "tests/fixtures/**",
     "scripts/probe-providers.ts",
   ]),
   {

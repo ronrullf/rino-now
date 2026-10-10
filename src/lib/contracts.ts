@@ -51,6 +51,21 @@ export const rateSchema = z.object({
 });
 export type Rate = z.infer<typeof rateSchema>;
 export type FxSnapshot = Partial<Record<Rate["currency"], Rate>>;
+export type AllTimeLow = {
+  amount: string;
+  currency: Snapshot["currency"];
+  usd: string | null;
+  recordedAt: string;
+};
+export type PriceHistoryEntry = {
+  id: number;
+  productId: string;
+  market: Snapshot["market"];
+  amount: string;
+  currency: Snapshot["currency"];
+  usd: string | null;
+  recordedAt: string;
+};
 export type RegionResult = Snapshot & {
   lastAttemptAt: string | null;
   refreshError: string | null;
@@ -63,6 +78,8 @@ export type RegionResult = Snapshot & {
   stale: boolean;
   rankEligible: boolean;
   rankingReason: string | null;
+  allTimeLow?: AllTimeLow | null;
+  isAllTimeLow?: boolean;
 };
 export type Comparison = {
   product: Product;
@@ -73,6 +90,7 @@ export type Comparison = {
   saved: boolean;
   demo: boolean;
   nextRefreshAt: string | null;
+  priceHistory?: Partial<Record<Snapshot["market"], PriceHistoryEntry[]>>;
 };
 export type SearchPage = {
   products: Product[];

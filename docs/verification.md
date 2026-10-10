@@ -54,3 +54,19 @@ The production app was left running at http://127.0.0.1:3000 in live mode. It wa
 - Added a separate DLC/add-on savings selection and expanded the curated games pool to ten titles. Eight recognizable add-ons are checked; only eligible fresh comparisons with at least two markets are ranked. These are curated selections, not verified sales/download rankings or guaranteed gross profit.
 - Both categories initially show six cards, with accessible arrow buttons to show all eligible items and collapse again. Cards retain cheapest-country prices, USD differences and regional store links.
 - Validation: 72 tests, lint and production build/TypeScript passed. Live local Vercel-mode API returned ten games and seven eligible DLCs without warnings. Browser verified game expansion/collapse and DLC expansion with real regional prices.
+
+## Team Features, Multi-Store Basket, and Price History — 2026-10-10
+
+- **Team Purchasing Basket (`/basket`)**: Multi-store portfolio calculator computing the optimal hybrid multi-market split (cheapest country per item), single-store total purchasing comparisons across all 4 countries (US, TR, IN, JP), aggregate USD savings, 1-click Markdown export formatted for team communication, and direct regional store purchase links.
+- **Watchlist Power Tools**: Sequential batch refresh with cooldown pacing and live counter, multi-dimensional filters (title search, Games vs. DLCs pills, winning country filter, savings threshold ≥20%/≥40%/≥60%), RFC 4180 compliant CSV export, formatted Markdown table export, and basket integration.
+- **Foreign Transaction Fee Simulator**: Interactive credit card FX fee simulator (0%, +1.5%, +2.5%, +3.0%) applied to non-USD currencies (TRY, INR, JPY) in real time with dynamic winner re-calculation and ranking preservation.
+- **Price History & All-Time Low (ATL) Tracking**: Added idempotent `price_history` schema with 24h deduplication. Shows green ATL badges when verified prices match or beat recorded history, along with a collapsible historical price check timeline drawer.
+- **Related Editions & Add-ons Switcher**: Automated title cleaner identifying core franchises to surface standard, deluxe, premium editions and add-on bundles for fast 1-click comparisons.
+- **Validation**:
+  - `npm test`: **81 tests passed** across 14 test files (0 failures).
+  - `npm run typecheck`: **0 errors**.
+  - `npm run lint`: **0 errors, 0 warnings**.
+  - `npm run build`: Compiled successfully in Turbopack across all 14 dynamic routes.
+  - `npm run test:ui`: 3 Playwright tests passed (WCAG AA accessibility verified, responsive layout verified down to 320px).
+  - `npm run smoke:live`: Verified live against Microsoft DisplayCatalog and Frankfurter API.
+

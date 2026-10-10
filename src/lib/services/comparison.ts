@@ -8,7 +8,7 @@ import { emptySnapshot } from "../providers/catalog-parser";
 import { compare } from "../pricing/compare";
 import { markets } from "../regions";
 import { AppError, errorCode } from "../errors";
-import type { CatalogProvider, Comparison, FxSnapshot } from "../contracts";
+import type { CatalogProvider, Comparison, FxSnapshot, Snapshot } from "../contracts";
 export class ComparisonService {
   private flights = new Map<string, Promise<void>>();
   private fxFlight: Promise<void> | null = null;
@@ -178,6 +178,31 @@ export class ComparisonService {
       const a = attempts.find((a) => a.market === r.market);
       r.lastAttemptAt = a?.lastAttemptAt ?? null;
       r.refreshError = a?.error ?? null;
+      if (r.status === "available" && r.currentAmount !== null) {
+        this.repo.recordPriceHistory(
+          id,
+          r.market,
+          r.currentAmount,
+          r.currency,
+          r.usd,
+          r.fetchedAt ?? at,
+        );
+      }
+    }
+    const allTimeLows = this.repo.allTimeLows(id);
+    const rawHistory = this.repo.priceHistory(id);
+    const historyByMarket: Partial<Record<Snapshot["market"], typeof rawHistory>> = {};
+    for (const entry of rawHistory) {
+      (historyByMarket[entry.market] ??= []).push(entry);
+    }
+    for (const r of result.regions) {
+      const atl = allTimeLows[r.market];
+      r.allTimeLow = atl ?? null;
+      r.isAllTimeLow =
+        atl !== null &&
+        atl !== undefined &&
+        r.currentAmount !== null &&
+        Number(r.currentAmount) <= Number(atl.amount);
     }
     const warnings: string[] = [];
     if (Date.parse(at) < this.fxFailureUntil)
@@ -214,6 +239,7 @@ export class ComparisonService {
         id,
         config.REFRESH_COOLDOWN_SECONDS * 1000,
       ),
+      priceHistory: historyByMarket,
     };
   }
 }

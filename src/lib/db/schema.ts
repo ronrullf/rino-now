@@ -75,3 +75,21 @@ export const refreshCooldown = sqliteTable("refresh_cooldowns", {
     .references(() => products.id),
   attemptAt: integer("attempt_at").notNull(),
 });
+export const priceHistory = sqliteTable(
+  "price_history",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    productId: text("product_id")
+      .notNull()
+      .references(() => products.id),
+    market: text("market").notNull(),
+    amount: text("amount").notNull(),
+    currency: text("currency").notNull(),
+    usd: text("usd"),
+    recordedAt: text("recorded_at").notNull(),
+  },
+  (t) => [
+    index("price_history_product_idx").on(t.productId, t.market),
+    index("price_history_recorded_idx").on(t.recordedAt),
+  ],
+);

@@ -28,10 +28,21 @@ Keep the process running while using the app. Run commands from the project root
 
 1. Search a title, or paste an official Xbox product URL / 12-character product ID.
 2. Select the exact edition or DLC. Unknown platform metadata remains labeled.
-3. Compare native prices and approximate USD amounts across four markets.
-4. Save products to the watchlist, refresh when needed, or open the regional store.
+3. Compare native prices and approximate USD amounts across four markets with real-time foreign transaction fee simulations (0%, +1.5%, +2.5%, +3.0%).
+4. Track historical price checks and All-Time Low (ATL) indicators, and navigate between related editions and add-ons.
+5. Save products to the watchlist with multi-dimensional filtering, batch refresh, and CSV/Markdown export.
+6. Assemble a team purchasing basket to compute the optimal multi-market split, consolidated single-store comparisons, and total portfolio savings.
 
 Savings use the **current public US price**, not US MSRP. Membership, subscription, trial, rental, conditional, ambiguous, expired, or excessively stale offers cannot win. A confirmed zero public price is valid; missing prices remain null. Regional links do not control the account/checkout region.
+
+## Team Features & Capabilities
+
+- **Team Purchasing Basket & Multi-Store Planner (`/basket`)**: Add any games or DLCs to a local purchasing basket. Computes the optimal hybrid split (buying each item in its cheapest regional store), complete single-country totals (buying everything in US vs TR vs IN vs JP), aggregate USD savings, and 1-click Markdown reports formatted for Slack/Notion.
+- **Watchlist Power Tools**: Batch sequential refresh with polite pacing and progress indicators, multi-dimensional filters (title search, category pills, winning region filter, savings threshold), 1-click RFC 4180 CSV export, 1-click Markdown table export, and basket synchronization.
+- **Foreign Transaction Fee Simulator**: Simulate real credit card foreign transaction fees (0%, +1.5%, +2.5%, +3.0%) applied to TRY, INR, and JPY while preserving USD base, updating winner rankings and savings dynamically.
+- **Price History & All-Time Low (ATL) Tracking**: Transparent price check history recording with 24h deduplication in SQLite. Displays green "ATL" badges on region cards when a price matches or beats recorded history, with a collapsible history drawer.
+- **Related Editions & Add-ons Switcher**: Core franchise discovery identifying standard, deluxe, and premium editions as well as add-on bundles for fast 1-click switching.
+
 
 ## Commands
 
