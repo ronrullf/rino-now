@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import nextEnv from "@next/env";
+nextEnv.loadEnvConfig(process.cwd());
 import { ingestApifyDataset, fetchAndIngestApifyDataset, type ApifyRawItem } from "../src/lib/services/apify-import";
 
 async function main() {

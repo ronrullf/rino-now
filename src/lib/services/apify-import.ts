@@ -1,4 +1,3 @@
-import "server-only";
 import { repository } from "../db/client";
 import { parseCatalog } from "../providers/catalog-parser";
 import { now } from "../providers/microsoft";
@@ -118,6 +117,7 @@ export async function ingestApifyDataset(
     for (let i = 0; i < idList.length; i += chunkSize) {
       const chunk = idList.slice(i, i + chunkSize);
       const bigIdsParam = chunk.join(",");
+      console.log(`Syncing chunk ${Math.floor(i / chunkSize) + 1} of ${Math.ceil(idList.length / chunkSize)} (${chunk.length} titles across US, TR, IN, JP)...`);
 
       await Promise.all(
         markets.map(async (market) => {

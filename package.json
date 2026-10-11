@@ -14,7 +14,7 @@
     "test:ui": "playwright test",
     "format": "prettier --write src tests scripts *.ts *.mjs",
     "smoke:live": "node scripts/smoke-live.mjs",
-    "import:apify": "tsx scripts/import-apify.ts"
+    "import:apify": "node --conditions=react-server --import=tsx scripts/import-apify.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",

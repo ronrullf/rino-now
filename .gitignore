@@ -1,6 +1,7 @@
 node_modules/
 .next/
 data/
+apify datasets/
 .env*
 !.env.example
 *.sqlite*
