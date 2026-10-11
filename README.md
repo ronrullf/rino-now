@@ -37,9 +37,10 @@ Savings use the **current public US price**, not US MSRP. Membership, subscripti
 
 ## Team Features & Capabilities
 
+- **Master Catalog Browser & 4-Region Matrix (`/catalog`)**: Full store overview displaying games with side-by-side US, Turkey, India, and Japan native prices, USD converted amounts, cheapest regional winner, savings %, and direct links to each official regional store. Includes high-speed parallel batch synchronization (50 titles per query via Microsoft DisplayCatalog), 1-click RFC 4180 CSV export formatted for e-commerce store builders, and Matrix Table vs Card Grid view toggles.
 - **Unlimited Regional Price Gaps & Game Reseller Mode**: Display every single game and DLC with verified regional price differences across the US, Turkey, India, and Japan without artificial caps or limits. Includes dedicated Reseller Mode calculating Sourcing Cost, Retail Benchmark, Gross Arbitrage Spread ($ and %), and Projected Resale Profit per unit.
 - **Store Builder Catalog Exports**: 1-click export of the regional price gap inventory to RFC 4180 CSV (formatted for Shopify/WooCommerce/custom stores) or structured JSON (for custom web shop backends).
-- **On-Demand Catalog Scanning**: Scan and populate unpriced database games in background batches directly from the UI or API (`POST /api/opportunities`).
+- **On-Demand Catalog Scanning**: Scan and populate unpriced database games in background batches directly from the UI or API (`POST /api/opportunities` & `POST /api/catalog/sync`).
 - **Team Purchasing Basket & Multi-Store Planner (`/basket`)**: Add any games or DLCs to a local purchasing basket. Computes the optimal hybrid split (buying each item in its cheapest regional store), complete single-country totals (buying everything in US vs TR vs IN vs JP), aggregate USD savings, and 1-click Markdown reports formatted for Slack/Notion.
 - **Watchlist Power Tools**: Batch sequential refresh with polite pacing and progress indicators, multi-dimensional filters (title search, category pills, winning region filter, savings threshold), 1-click RFC 4180 CSV export, 1-click Markdown table export, and basket synchronization.
 - **Foreign Transaction Fee Simulator**: Simulate real credit card foreign transaction fees (0%, +1.5%, +2.5%, +3.0%) applied to TRY, INR, and JPY while preserving USD base, updating winner rankings and savings dynamically.

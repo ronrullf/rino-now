@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search, Bookmark, ShoppingBag } from "lucide-react";
+import { Search, Bookmark, ShoppingBag, Globe2 } from "lucide-react";
 import { getBasket, subscribeBasket } from "@/lib/basket-store";
 export function Nav() {
   const path = usePathname();
@@ -16,9 +16,10 @@ export function Nav() {
   }, []);
 
   return (
-    <nav aria-label="Main navigation" className="flex gap-1">
+    <nav aria-label="Main navigation" className="flex max-w-full flex-wrap items-center gap-1">
       {[
         { href: "/", name: "Explore", icon: Search },
+        { href: "/catalog", name: "Catalog", icon: Globe2 },
         { href: "/watchlist", name: "Watchlist", icon: Bookmark },
         {
           href: "/basket",
