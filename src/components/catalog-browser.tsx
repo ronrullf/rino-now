@@ -143,7 +143,7 @@ export function CatalogBrowser() {
       });
   }, [items, marketFilter, minSavings, searchQuery, sortBy]);
 
-  // Export RFC 4180 CSV with all 4 regional links
+  // Export RFC 4180 CSV with all 4 regional links and USD translations
   function exportCatalogCsv() {
     if (!filteredItems.length) return;
     const headers = [
@@ -151,18 +151,19 @@ export function CatalogBrowser() {
       "Title",
       "Type",
       "Cheapest Market",
-      "Cheapest (USD)",
+      "Cheapest Price (USD)",
+      "Arbitrage Gap (USD)",
       "Savings (%)",
-      "US Price",
+      "US Price (USD)",
+      "Turkey Price (USD)",
+      "Turkey Native (TRY)",
+      "India Price (USD)",
+      "India Native (INR)",
+      "Japan Price (USD)",
+      "Japan Native (JPY)",
       "US Store URL",
-      "Turkey Price (TRY)",
-      "Turkey USD",
       "Turkey Store URL",
-      "India Price (INR)",
-      "India USD",
       "India Store URL",
-      "Japan Price (JPY)",
-      "Japan USD",
       "Japan Store URL",
     ];
 
@@ -177,18 +178,19 @@ export function CatalogBrowser() {
         `"${it.title.replace(/"/g, '""')}"`,
         `"${it.type}"`,
         `"${it.cheapestMarket ?? "N/A"}"`,
-        `"${it.cheapestUsd ?? "N/A"}"`,
+        `"${it.cheapestUsd ? "$" + it.cheapestUsd : "N/A"}"`,
+        `"${it.differenceUsd ? "$" + it.differenceUsd : "$0.00"}"`,
         `"${it.differencePercent ? it.differencePercent + "%" : "0%"}"`,
-        `"${us?.nativeAmount ? "$" + us.nativeAmount : "Unavailable"}"`,
-        `"${us?.storeUrl ?? ""}"`,
+        `"${us?.usdAmount ? "$" + us.usdAmount : us?.nativeAmount ? "$" + us.nativeAmount : "Unavailable"}"`,
+        `"${tr?.usdAmount ? "$" + tr.usdAmount : "Unavailable"}"`,
         `"${tr?.nativeAmount ? tr.nativeAmount + " TRY" : "Unavailable"}"`,
-        `"${tr?.usdAmount ? "$" + tr.usdAmount : "N/A"}"`,
-        `"${tr?.storeUrl ?? ""}"`,
+        `"${inReg?.usdAmount ? "$" + inReg.usdAmount : "Unavailable"}"`,
         `"${inReg?.nativeAmount ? inReg.nativeAmount + " INR" : "Unavailable"}"`,
-        `"${inReg?.usdAmount ? "$" + inReg.usdAmount : "N/A"}"`,
-        `"${inReg?.storeUrl ?? ""}"`,
+        `"${jp?.usdAmount ? "$" + jp.usdAmount : "Unavailable"}"`,
         `"${jp?.nativeAmount ? jp.nativeAmount + " JPY" : "Unavailable"}"`,
-        `"${jp?.usdAmount ? "$" + jp.usdAmount : "N/A"}"`,
+        `"${us?.storeUrl ?? ""}"`,
+        `"${tr?.storeUrl ?? ""}"`,
+        `"${inReg?.storeUrl ?? ""}"`,
         `"${jp?.storeUrl ?? ""}"`,
       ];
     });
@@ -198,7 +200,7 @@ export function CatalogBrowser() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `microsoft-store-all-regions-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.download = `microsoft-store-usd-gap-all-regions-${new Date().toISOString().slice(0, 10)}.csv`;
     link.click();
     URL.revokeObjectURL(url);
   }
@@ -207,14 +209,20 @@ export function CatalogBrowser() {
   async function copyMarkdownTable() {
     if (!filteredItems.length) return;
     const header =
-      "| # | Game | Cheapest Market | Best USD | US Store | Turkey Store | India Store | Japan Store |\n|---|---|---|---|---|---|---|---|";
+      "| # | Game | Cheapest Market | Best USD | USD Gap ($ / %) | US Store (USD) | Turkey (USD / TRY) | India (USD / INR) | Japan (USD / JPY) |\n|---|---|---|---|---|---|---|---|---|";
     const rows = filteredItems.map((it, i) => {
       const us = it.regions.find((r) => r.market === "US");
       const tr = it.regions.find((r) => r.market === "TR");
       const inReg = it.regions.find((r) => r.market === "IN");
       const jp = it.regions.find((r) => r.market === "JP");
 
-      return `| ${i + 1} | [${it.title}](${it.storeUrl}) | ${it.cheapestMarket ?? "N/A"} | $${it.cheapestUsd ?? "N/A"} | [${us?.nativeAmount ? "$" + us.nativeAmount : "Store"}](${us?.storeUrl}) | [${tr?.nativeAmount ? tr.nativeAmount + " TRY" : "Store"}](${tr?.storeUrl}) | [${inReg?.nativeAmount ? inReg.nativeAmount + " INR" : "Store"}](${inReg?.storeUrl}) | [${jp?.nativeAmount ? jp.nativeAmount + " JPY" : "Store"}](${jp?.storeUrl}) |`;
+      const gapStr = it.differenceUsd ? `Save $${it.differenceUsd} (${it.differencePercent}%)` : "—";
+      const usStr = us?.usdAmount ? `$${us.usdAmount}` : "N/A";
+      const trStr = tr?.usdAmount ? `$${tr.usdAmount} (${tr.nativeAmount} TRY)` : "N/A";
+      const inStr = inReg?.usdAmount ? `$${inReg.usdAmount} (${inReg.nativeAmount} INR)` : "N/A";
+      const jpStr = jp?.usdAmount ? `$${jp.usdAmount} (${jp.nativeAmount} JPY)` : "N/A";
+
+      return `| ${i + 1} | [${it.title}](${it.storeUrl}) | ${it.cheapestMarket ?? "N/A"} | $${it.cheapestUsd ?? "N/A"} | ${gapStr} | [${usStr}](${us?.storeUrl}) | [${trStr}](${tr?.storeUrl}) | [${inStr}](${inReg?.storeUrl}) | [${jpStr}](${jp?.storeUrl}) |`;
     });
 
     await navigator.clipboard.writeText([header, ...rows].join("\n"));
@@ -437,11 +445,11 @@ export function CatalogBrowser() {
             <thead className="border-b border-line bg-surface text-muted uppercase tracking-wider font-semibold">
               <tr>
                 <th className="py-3 px-4">Game</th>
-                <th className="py-3 px-4">🇺🇸 United States</th>
-                <th className="py-3 px-4">🇹🇷 Turkey</th>
-                <th className="py-3 px-4">🇮🇳 India</th>
-                <th className="py-3 px-4">🇯🇵 Japan</th>
-                <th className="py-3 px-4">Best Market</th>
+                <th className="py-3 px-4">🇺🇸 US Store (USD)</th>
+                <th className="py-3 px-4">🇹🇷 Turkey (USD / TRY)</th>
+                <th className="py-3 px-4">🇮🇳 India (USD / INR)</th>
+                <th className="py-3 px-4">🇯🇵 Japan (USD / JPY)</th>
+                <th className="py-3 px-4">🎯 Best Deal & USD Gap</th>
                 <th className="py-3 px-4 text-right">Actions</th>
               </tr>
             </thead>
@@ -469,14 +477,14 @@ export function CatalogBrowser() {
 
                     {/* US Column */}
                     <td className="py-3 px-4">
-                      {us?.status === "available" && us.nativeAmount ? (
+                      {us?.status === "available" && (us.usdAmount || us.nativeAmount) ? (
                         <div>
-                          <p className="font-semibold">${us.nativeAmount} USD</p>
+                          <p className="font-bold text-sm">${us.usdAmount ?? us.nativeAmount} USD</p>
                           <a
                             href={us.storeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[11px] text-brand hover:underline"
+                            className="inline-flex items-center gap-1 text-[11px] text-brand hover:underline mt-0.5"
                           >
                             US Store <ArrowUpRight size={11} />
                           </a>
@@ -490,15 +498,17 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {tr?.status === "available" && tr.nativeAmount ? (
                         <div>
-                          <p className={`font-semibold ${item.cheapestMarket === "TR" ? "text-positive font-bold" : ""}`}>
+                          <p className={`text-sm font-bold ${item.cheapestMarket === "TR" ? "text-positive" : ""}`}>
+                            {tr.usdAmount ? `$${tr.usdAmount} USD` : "—"}
+                          </p>
+                          <p className="text-[11px] text-muted">
                             {tr.nativeAmount} TRY
                           </p>
-                          <p className="text-[10px] text-muted">~${tr.usdAmount} USD</p>
                           <a
                             href={tr.storeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[11px] text-brand hover:underline"
+                            className="inline-flex items-center gap-1 text-[11px] text-brand hover:underline mt-0.5"
                           >
                             TR Store <ArrowUpRight size={11} />
                           </a>
@@ -512,15 +522,17 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {inReg?.status === "available" && inReg.nativeAmount ? (
                         <div>
-                          <p className={`font-semibold ${item.cheapestMarket === "IN" ? "text-positive font-bold" : ""}`}>
-                            {inReg.nativeAmount} INR
+                          <p className={`text-sm font-bold ${item.cheapestMarket === "IN" ? "text-positive" : ""}`}>
+                            {inReg.usdAmount ? `$${inReg.usdAmount} USD` : "—"}
                           </p>
-                          <p className="text-[10px] text-muted">~${inReg.usdAmount} USD</p>
+                          <p className="text-[11px] text-muted">
+                            ₹{inReg.nativeAmount} INR
+                          </p>
                           <a
                             href={inReg.storeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-brand hover:underline"
+                            className="inline-flex items-center gap-1 text-[11px] text-brand hover:underline mt-0.5"
                           >
                             IN Store <ArrowUpRight size={11} />
                           </a>
@@ -534,15 +546,17 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {jp?.status === "available" && jp.nativeAmount ? (
                         <div>
-                          <p className={`font-semibold ${item.cheapestMarket === "JP" ? "text-positive font-bold" : ""}`}>
-                            {jp.nativeAmount} JPY
+                          <p className={`text-sm font-bold ${item.cheapestMarket === "JP" ? "text-positive" : ""}`}>
+                            {jp.usdAmount ? `$${jp.usdAmount} USD` : "—"}
                           </p>
-                          <p className="text-[10px] text-muted">~${jp.usdAmount} USD</p>
+                          <p className="text-[11px] text-muted">
+                            ¥{jp.nativeAmount} JPY
+                          </p>
                           <a
                             href={jp.storeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-brand hover:underline"
+                            className="inline-flex items-center gap-1 text-[11px] text-brand hover:underline mt-0.5"
                           >
                             JP Store <ArrowUpRight size={11} />
                           </a>
@@ -554,15 +568,17 @@ export function CatalogBrowser() {
 
                     {/* Best Market & Savings */}
                     <td className="py-3 px-4">
-                      {item.cheapestMarket ? (
+                      {item.cheapestMarket && item.cheapestUsd ? (
                         <div>
-                          <span className="inline-flex items-center gap-1 rounded bg-positive-soft px-2 py-0.5 text-positive font-bold">
-                            {FLAG_EMOJI[item.cheapestMarket]} {item.cheapestMarket}
+                          <span className="inline-flex items-center gap-1 rounded bg-positive-soft px-2 py-0.5 text-xs font-bold text-positive">
+                            {FLAG_EMOJI[item.cheapestMarket]} {item.cheapestMarket}: ${item.cheapestUsd}
                           </span>
-                          {item.differencePercent && (
-                            <p className="text-[11px] text-positive font-semibold mt-0.5">
-                              {item.differencePercent}% less
+                          {item.differenceUsd && Number(item.differenceUsd) > 0 ? (
+                            <p className="text-[11px] text-positive font-bold mt-1">
+                              Save ${item.differenceUsd} ({item.differencePercent}% gap)
                             </p>
+                          ) : (
+                            <p className="text-[10px] text-muted mt-0.5">Identical price</p>
                           )}
                         </div>
                       ) : (
@@ -623,15 +639,15 @@ export function CatalogBrowser() {
                     {item.title}
                   </ProductLink>
                   <span className="text-[10px] text-muted">{item.id}</span>
-                  {item.differencePercent && (
+                  {item.differenceUsd && Number(item.differenceUsd) > 0 && (
                     <span className="mt-1 inline-block rounded bg-positive-soft px-1.5 py-0.5 text-[10px] font-bold text-positive">
-                      {item.differencePercent}% cheaper in {item.cheapestMarket}
+                      Save ${item.differenceUsd} ({item.differencePercent}% gap in {item.cheapestMarket})
                     </span>
                   )}
                 </div>
               </div>
 
-              {/* 4-market Price & Link Pills */}
+              {/* 4-market Price & Link Pills with USD translations */}
               <div className="my-3 divide-y divide-line rounded-lg border border-line bg-surface text-[11px]">
                 {item.regions.map((reg) => (
                   <div key={reg.market} className="flex items-center justify-between p-2">
@@ -639,9 +655,16 @@ export function CatalogBrowser() {
                       <span>{FLAG_EMOJI[reg.market]}</span> {reg.market}:
                     </span>
                     <div className="text-right flex items-center gap-2">
-                      <span className={reg.market === item.cheapestMarket ? "font-bold text-positive" : ""}>
-                        {reg.nativeAmount ? `${reg.nativeAmount} ${reg.currency}` : "N/A"}
-                      </span>
+                      <div className="text-right">
+                        <span className={`block font-semibold ${reg.market === item.cheapestMarket ? "font-bold text-positive" : ""}`}>
+                          {reg.usdAmount ? `$${reg.usdAmount} USD` : "N/A"}
+                        </span>
+                        {reg.nativeAmount && reg.market !== "US" && (
+                          <span className="text-[10px] text-muted block">
+                            ({reg.nativeAmount} {reg.currency})
+                          </span>
+                        )}
+                      </div>
                       <a
                         href={reg.storeUrl}
                         target="_blank"
@@ -649,7 +672,7 @@ export function CatalogBrowser() {
                         className="text-brand hover:underline inline-flex items-center"
                         title={`Open ${reg.marketName} Store`}
                       >
-                        <ArrowUpRight size={11} />
+                        <ArrowUpRight size={13} />
                       </a>
                     </div>
                   </div>

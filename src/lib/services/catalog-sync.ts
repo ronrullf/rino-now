@@ -254,7 +254,7 @@ export async function getMasterCatalog(options: {
     try {
       const comp = await compService.get(product.id, { cachedOnly: true });
 
-      // Build 4-region pricing & links breakdown
+      // Build 4-region pricing & links breakdown with clean 2-decimal USD amounts
       const regionalPrices: RegionalStorePrice[] = markets.map((m) => {
         const reg = comp.regions.find((r) => r.market === m);
         return {
@@ -262,17 +262,18 @@ export async function getMasterCatalog(options: {
           marketName: regions[m].name,
           currency: regions[m].currency,
           nativeAmount: reg?.currentAmount ?? null,
-          usdAmount: reg?.usd ?? null,
+          usdAmount: reg?.usd ? new Decimal(reg.usd).toFixed(2) : null,
           status: reg?.status ?? "unavailable",
           storeUrl:
             reg?.storeUrl ??
             `https://www.xbox.com/${regions[m].locale}/games/store/p/${product.id.toLowerCase()}`,
-          rankEligible: !!reg?.rankEligible && !reg.stale && !reg.refreshError && reg.usd !== null,
+          rankEligible: reg?.status === "available" && reg.usd !== null,
         };
       });
 
-      const eligible = comp.regions
-        .filter((r) => r.rankEligible && !r.stale && !r.refreshError && r.usd !== null)
+      // Filter all regions that have an available price with a converted USD value
+      const validPricing = comp.regions
+        .filter((r) => r.status === "available" && r.usd !== null && !r.refreshError)
         .sort((a, b) => new Decimal(a.usd!).cmp(b.usd!));
 
       let cheapestMarket: Market | null = null;
@@ -284,26 +285,30 @@ export async function getMasterCatalog(options: {
       let differenceUsd: string | null = null;
       let differencePercent: string | null = null;
 
-      if (eligible.length >= 2) {
-        const cheapest = eligible[0];
-        const highest = eligible[eligible.length - 1];
-        const highDec = new Decimal(highest.usd!);
-        const cheapDec = new Decimal(cheapest.usd!);
-        const diff = highDec.minus(cheapDec);
-
+      if (validPricing.length >= 1) {
+        const cheapest = validPricing[0];
         cheapestMarket = cheapest.market;
-        cheapestUsd = cheapDec.toFixed(2);
+        cheapestUsd = new Decimal(cheapest.usd!).toFixed(2);
         cheapestNative = cheapest.currentAmount;
         cheapestCurrency = cheapest.currency;
-        highestMarket = highest.market;
-        highestUsd = highDec.toFixed(2);
-        differenceUsd = diff.toFixed(2);
-        differencePercent = highDec.isZero() ? "0" : diff.div(highDec).mul(100).toFixed(1);
-      } else if (eligible.length === 1) {
-        cheapestMarket = eligible[0].market;
-        cheapestUsd = new Decimal(eligible[0].usd!).toFixed(2);
-        cheapestNative = eligible[0].currentAmount;
-        cheapestCurrency = eligible[0].currency;
+
+        const usRegion = comp.regions.find(
+          (r) => r.market === "US" && r.status === "available" && r.usd !== null,
+        );
+        const baseline = usRegion && usRegion.market !== cheapest.market
+          ? usRegion
+          : validPricing[validPricing.length - 1];
+
+        if (baseline && baseline.market !== cheapest.market) {
+          const baseDec = new Decimal(baseline.usd!);
+          const cheapDec = new Decimal(cheapest.usd!);
+          const diff = baseDec.minus(cheapDec);
+
+          highestMarket = baseline.market;
+          highestUsd = baseDec.toFixed(2);
+          differenceUsd = diff.toFixed(2);
+          differencePercent = baseDec.isZero() ? "0" : diff.div(baseDec).mul(100).toFixed(1);
+        }
       }
 
       const winningStoreUrl =
