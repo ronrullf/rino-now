@@ -13,7 +13,8 @@
     "db:migrate": "tsx scripts/migrate.ts",
     "test:ui": "playwright test",
     "format": "prettier --write src tests scripts *.ts *.mjs",
-    "smoke:live": "node scripts/smoke-live.mjs"
+    "smoke:live": "node scripts/smoke-live.mjs",
+    "import:apify": "tsx scripts/import-apify.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
