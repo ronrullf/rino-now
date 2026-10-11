@@ -65,6 +65,7 @@ export async function ingestApifyDataset(
   options: {
     batchFetchRegions?: boolean;
     batchLimit?: number;
+    forceRefresh?: boolean;
   } = {},
 ): Promise<{
   totalReceived: number;
@@ -112,12 +113,23 @@ export async function ingestApifyDataset(
 
   if (options.batchFetchRegions && config.DATA_MODE !== "fixture") {
     const idList = Array.from(validIds).slice(0, options.batchLimit ?? validIds.size);
+    const toSync = options.forceRefresh
+      ? idList
+      : idList.filter((pId) => {
+          const snaps = repo.snapshots(pId);
+          return snaps.length < markets.length;
+        });
+
+    console.log(
+      `Dataset deduplication: ${idList.length} unique products parsed (${idList.length - toSync.length} already fully synced in SQLite, ${toSync.length} new/incomplete to fetch).`,
+    );
+
     const chunkSize = 25;
 
-    for (let i = 0; i < idList.length; i += chunkSize) {
-      const chunk = idList.slice(i, i + chunkSize);
+    for (let i = 0; i < toSync.length; i += chunkSize) {
+      const chunk = toSync.slice(i, i + chunkSize);
       const bigIdsParam = chunk.join(",");
-      console.log(`Syncing chunk ${Math.floor(i / chunkSize) + 1} of ${Math.ceil(idList.length / chunkSize)} (${chunk.length} titles across US, TR, IN, JP)...`);
+      console.log(`Syncing chunk ${Math.floor(i / chunkSize) + 1} of ${Math.ceil(toSync.length / chunkSize)} (${chunk.length} titles across US, TR, IN, JP)...`);
 
       await Promise.all(
         markets.map(async (market) => {
@@ -182,6 +194,7 @@ export async function ingestApifyDataset(
 export async function fetchAndIngestApifyDataset(
   datasetId: string,
   apiToken?: string,
+  options: { forceRefresh?: boolean } = {},
 ): Promise<{
   totalReceived: number;
   validProductIds: number;
@@ -198,5 +211,5 @@ export async function fetchAndIngestApifyDataset(
   }
 
   const items = (await res.json()) as ApifyRawItem[];
-  return ingestApifyDataset(items, { batchFetchRegions: true });
+  return ingestApifyDataset(items, { batchFetchRegions: true, forceRefresh: options.forceRefresh });
 }

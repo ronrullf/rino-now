@@ -9,6 +9,7 @@ async function main() {
   let filePath: string | null = null;
   let datasetId: string | null = null;
   let token: string | undefined = undefined;
+  let forceRefresh = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--file" && args[i + 1]) {
@@ -17,6 +18,8 @@ async function main() {
       datasetId = args[++i];
     } else if (args[i] === "--token" && args[i + 1]) {
       token = args[++i];
+    } else if (args[i] === "--force") {
+      forceRefresh = true;
     }
   }
 
@@ -24,7 +27,7 @@ async function main() {
 
   if (datasetId) {
     console.log(`Fetching dataset directly from Apify: ${datasetId}...`);
-    const stats = await fetchAndIngestApifyDataset(datasetId, token);
+    const stats = await fetchAndIngestApifyDataset(datasetId, token, { forceRefresh });
     console.log("Ingestion complete!");
     console.log(JSON.stringify(stats, null, 2));
     return;
@@ -42,15 +45,15 @@ async function main() {
     const items = JSON.parse(raw) as ApifyRawItem[];
     console.log(`Parsed ${items.length} records. Ingesting and syncing 4-region prices...`);
 
-    const stats = await ingestApifyDataset(items, { batchFetchRegions: true });
+    const stats = await ingestApifyDataset(items, { batchFetchRegions: true, forceRefresh });
     console.log("Ingestion complete!");
     console.log(JSON.stringify(stats, null, 2));
     return;
   }
 
   console.log(`Usage:
-  npx tsx scripts/import-apify.ts --file ./data/my-apify-results.json
-  npx tsx scripts/import-apify.ts --dataset <datasetId> [--token <apiToken>]
+  npx tsx scripts/import-apify.ts --file ./data/my-apify-results.json [--force]
+  npx tsx scripts/import-apify.ts --dataset <datasetId> [--token <apiToken>] [--force]
   `);
 }
 
