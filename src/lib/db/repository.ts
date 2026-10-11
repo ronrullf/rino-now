@@ -339,6 +339,30 @@ export class Repository {
     }
     return result;
   }
+  productsWithSnapshots(): Product[] {
+    const rows = this.sqlite
+      .prepare(
+        `SELECT DISTINCT p.data FROM products p
+         INNER JOIN regional_snapshots s ON s.product_id = p.product_id
+         ORDER BY p.title ASC`,
+      )
+      .all() as { data: string | Product }[];
+    return rows.map((r) =>
+      typeof r.data === "string"
+        ? productSchema.parse(JSON.parse(r.data))
+        : productSchema.parse(r.data),
+    );
+  }
+  allProducts(limit = 1000): Product[] {
+    const rows = this.sqlite
+      .prepare(`SELECT data FROM products ORDER BY title ASC LIMIT ?`)
+      .all(limit) as { data: string | Product }[];
+    return rows.map((r) =>
+      typeof r.data === "string"
+        ? productSchema.parse(JSON.parse(r.data))
+        : productSchema.parse(r.data),
+    );
+  }
   health() {
     return this.db.get(sql`SELECT 1 AS ready`);
   }

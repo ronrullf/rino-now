@@ -37,11 +37,15 @@ Savings use the **current public US price**, not US MSRP. Membership, subscripti
 
 ## Team Features & Capabilities
 
+- **Unlimited Regional Price Gaps & Game Reseller Mode**: Display every single game and DLC with verified regional price differences across the US, Turkey, India, and Japan without artificial caps or limits. Includes dedicated Reseller Mode calculating Sourcing Cost, Retail Benchmark, Gross Arbitrage Spread ($ and %), and Projected Resale Profit per unit.
+- **Store Builder Catalog Exports**: 1-click export of the regional price gap inventory to RFC 4180 CSV (formatted for Shopify/WooCommerce/custom stores) or structured JSON (for custom web shop backends).
+- **On-Demand Catalog Scanning**: Scan and populate unpriced database games in background batches directly from the UI or API (`POST /api/opportunities`).
 - **Team Purchasing Basket & Multi-Store Planner (`/basket`)**: Add any games or DLCs to a local purchasing basket. Computes the optimal hybrid split (buying each item in its cheapest regional store), complete single-country totals (buying everything in US vs TR vs IN vs JP), aggregate USD savings, and 1-click Markdown reports formatted for Slack/Notion.
 - **Watchlist Power Tools**: Batch sequential refresh with polite pacing and progress indicators, multi-dimensional filters (title search, category pills, winning region filter, savings threshold), 1-click RFC 4180 CSV export, 1-click Markdown table export, and basket synchronization.
 - **Foreign Transaction Fee Simulator**: Simulate real credit card foreign transaction fees (0%, +1.5%, +2.5%, +3.0%) applied to TRY, INR, and JPY while preserving USD base, updating winner rankings and savings dynamically.
 - **Price History & All-Time Low (ATL) Tracking**: Transparent price check history recording with 24h deduplication in SQLite. Displays green "ATL" badges on region cards when a price matches or beats recorded history, with a collapsible history drawer.
 - **Related Editions & Add-ons Switcher**: Core franchise discovery identifying standard, deluxe, and premium editions as well as add-on bundles for fast 1-click switching.
+
 
 
 ## Commands

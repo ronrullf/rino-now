@@ -122,3 +122,24 @@ it("returns all ranked candidates so the UI can expand beyond six", () => {
     "9",
   ]);
 });
+
+it("supports kind='all' to rank both games and DLCs seamlessly", () => {
+  const game = comparison("Game1", "70", "20");
+  const dlc = comparison("DLC1", "30", "10");
+  dlc.product.type = "dlc";
+  const ranked = rankOpportunities([game, dlc], "all");
+  expect(ranked).toHaveLength(2);
+  expect(ranked.map((r) => r.product.id)).toEqual(["Game1", "DLC1"]);
+});
+
+it("computes commercial resale and arbitrage metrics for game-selling stores", () => {
+  const comp = comparison("Game1", "100", "25");
+  const [opp] = rankOpportunities([comp], "games");
+  expect(opp.sourcingCostUsd).toBe("25.00");
+  expect(opp.referenceUsd).toBe("100.00");
+  expect(opp.marginUsd).toBe("75.00");
+  expect(opp.marginPercent).toBe("75.0");
+  expect(opp.suggestedResaleUsd).toBe("80.00"); // 20% discount below 100
+  expect(opp.projectedProfitUsd).toBe("55.00"); // 80 - 25
+});
+

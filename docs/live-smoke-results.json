@@ -1,9 +1,9 @@
 {
-  "executedAt": "2026-10-10T14:12:57.989Z",
+  "executedAt": "2026-10-11T03:08:23.416Z",
   "results": [
     {
       "capability": "title search",
-      "source": "cache",
+      "source": "live",
       "count": 20
     },
     {
@@ -17,7 +17,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",
@@ -59,7 +59,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",
@@ -101,7 +101,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",
@@ -143,7 +143,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",
@@ -185,7 +185,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",
@@ -228,7 +228,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",
@@ -270,7 +270,7 @@
           "rankEligible": true,
           "currency": "USD",
           "fxProvider": "Identity",
-          "fxDate": "2026-10-10"
+          "fxDate": "2026-10-11"
         },
         {
           "market": "TR",

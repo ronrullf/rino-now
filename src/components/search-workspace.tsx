@@ -121,6 +121,7 @@ export function SearchWorkspace() {
           [
             ["games", "Games"],
             ["dlc", "DLCs & add-ons"],
+            ["all", "All Titles"],
           ] as const
         ).map(([value, label]) => (
           <button
@@ -292,7 +293,7 @@ export function SearchWorkspace() {
         )}
       </div>
       {!query && (
-        <TopOpportunities key={kind} kind={kind === "dlc" ? "dlc" : "games"} />
+        <TopOpportunities key={kind} kind={kind} />
       )}
       {!result && !loading && !query && (
         <>

@@ -70,3 +70,24 @@ The production app was left running at http://127.0.0.1:3000 in live mode. It wa
   - `npm run test:ui`: 3 Playwright tests passed (WCAG AA accessibility verified, responsive layout verified down to 320px).
   - `npm run smoke:live`: Verified live against Microsoft DisplayCatalog and Frankfurter API.
 
+## Unlimited Regional Price Gaps & Game Reseller / Marketplace Engine — 2026-10-10
+
+- **Unlimited Opportunity Engine**: Removed hardcoded product limitations. Integrates SQLite database candidates (`productsWithSnapshots`) with seeded curated pools. Allows ranking every single game and DLC in the system with verified regional price differences.
+- **Full Category Support (`kind="all"`)**: Added "All Titles" mode spanning both games and DLCs simultaneously.
+- **E-Commerce & Game Selling Insights (Reseller Mode)**:
+  - Added commercial metrics: Sourcing Cost ($ USD and local currency), Retail Benchmark ($ USD), Gross Arbitrage Spread ($ USD and %), and Suggested Resale Price (~20% below retail) with Projected Net Profit.
+  - Interactive Reseller Mode toggle switching cards to commercial margin view.
+- **Store Builder Catalog Exports**:
+  - 1-click RFC 4180 CSV export formatted for e-commerce platforms (Shopify, WooCommerce, Medusa, custom database).
+  - 1-click JSON export for API / programmatic store setup.
+  - Formatted Markdown table export.
+- **On-Demand Catalog Ingestion / Scanning**: Added `POST /api/opportunities` and "Scan DB titles" UI button to batch-scan unpriced games in SQLite in the background and immediately populate the price gap inventory.
+- **Validation**:
+  - `npm test`: **83 tests passed** across 14 test files (0 failures).
+  - `npm run typecheck`: **0 errors**.
+  - `npm run lint`: **0 errors, 0 warnings**.
+  - `npm run build`: Compiled successfully in Turbopack.
+  - `npm run test:ui`: 3/3 Playwright browser & accessibility tests passed.
+  - `npm run smoke:live`: Verified against running production server.
+
+
