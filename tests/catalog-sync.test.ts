@@ -5,7 +5,7 @@ import {
   CORE_XBOX_CATALOG_SEEDS,
 } from "../src/lib/services/catalog-sync";
 
-describe("catalog synchronization and master store catalog", () => {
+describe("catalog synchronization and master store catalog", { timeout: 20000 }, () => {
   it("discovers core Xbox catalog seeds and Microsoft store IDs", async () => {
     const ids = await discoverMicrosoftGameIds();
     expect(ids.length).toBeGreaterThanOrEqual(CORE_XBOX_CATALOG_SEEDS.length);

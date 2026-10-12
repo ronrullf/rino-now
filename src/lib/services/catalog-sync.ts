@@ -109,7 +109,10 @@ export async function discoverMicrosoftGameIds(): Promise<string[]> {
     await Promise.all(
       feedUrls.map(async (url) => {
         try {
-          const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
+          const res = await fetch(url, {
+            headers: { "User-Agent": "Mozilla/5.0" },
+            signal: AbortSignal.timeout(2500),
+          });
           if (res.ok) {
             const items = (await res.json()) as Array<{ id?: string }>;
             for (const item of items) {
@@ -248,94 +251,115 @@ export async function getMasterCatalog(options: {
   const repo = repository();
   const allProducts = repo.productsWithSnapshots();
   const compService = comparisons();
+
+  // Pre-filter by query if provided to avoid unnecessary lookups
+  let targets = allProducts;
+  if (options.query?.trim()) {
+    const q = options.query.toLowerCase().trim();
+    targets = targets.filter(
+      (p) => p.title.toLowerCase().includes(q) || p.id.toLowerCase().includes(q),
+    );
+  }
+
+  // Process products in parallel chunks of 50
+  const chunkSize = 50;
   const items: MasterCatalogItem[] = [];
 
-  for (const product of allProducts) {
-    try {
-      const comp = await compService.get(product.id, { cachedOnly: true });
+  for (let i = 0; i < targets.length; i += chunkSize) {
+    const chunk = targets.slice(i, i + chunkSize);
+    const chunkItems = await Promise.all(
+      chunk.map(async (product) => {
+        try {
+          const comp = await compService.get(product.id, { cachedOnly: true });
 
-      // Build 4-region pricing & links breakdown with clean 2-decimal USD amounts
-      const regionalPrices: RegionalStorePrice[] = markets.map((m) => {
-        const reg = comp.regions.find((r) => r.market === m);
-        return {
-          market: m,
-          marketName: regions[m].name,
-          currency: regions[m].currency,
-          nativeAmount: reg?.currentAmount ?? null,
-          usdAmount: reg?.usd ? new Decimal(reg.usd).toFixed(2) : null,
-          status: reg?.status ?? "unavailable",
-          storeUrl:
-            reg?.storeUrl ??
-            `https://www.xbox.com/${regions[m].locale}/games/store/p/${product.id.toLowerCase()}`,
-          rankEligible: reg?.status === "available" && reg.usd !== null,
-        };
-      });
+          // Build 4-region pricing & links breakdown with clean 2-decimal USD amounts
+          const regionalPrices: RegionalStorePrice[] = markets.map((m) => {
+            const reg = comp.regions.find((r) => r.market === m);
+            return {
+              market: m,
+              marketName: regions[m].name,
+              currency: regions[m].currency,
+              nativeAmount: reg?.currentAmount ?? null,
+              usdAmount: reg?.usd ? new Decimal(reg.usd).toFixed(2) : null,
+              status: reg?.status ?? "unavailable",
+              storeUrl:
+                reg?.storeUrl ??
+                `https://www.xbox.com/${regions[m].locale}/games/store/p/${product.id.toLowerCase()}`,
+              rankEligible: reg?.status === "available" && reg.usd !== null,
+            };
+          });
 
-      // Filter all regions that have an available price with a converted USD value
-      const validPricing = comp.regions
-        .filter((r) => r.status === "available" && r.usd !== null && !r.refreshError)
-        .sort((a, b) => new Decimal(a.usd!).cmp(b.usd!));
+          // Filter all regions that have an available price with a converted USD value
+          const validPricing = comp.regions
+            .filter((r) => r.status === "available" && r.usd !== null && !r.refreshError)
+            .sort((a, b) => new Decimal(a.usd!).cmp(b.usd!));
 
-      let cheapestMarket: Market | null = null;
-      let cheapestUsd: string | null = null;
-      let cheapestNative: string | null = null;
-      let cheapestCurrency: string | null = null;
-      let highestMarket: Market | null = null;
-      let highestUsd: string | null = null;
-      let differenceUsd: string | null = null;
-      let differencePercent: string | null = null;
+          let cheapestMarket: Market | null = null;
+          let cheapestUsd: string | null = null;
+          let cheapestNative: string | null = null;
+          let cheapestCurrency: string | null = null;
+          let highestMarket: Market | null = null;
+          let highestUsd: string | null = null;
+          let differenceUsd: string | null = null;
+          let differencePercent: string | null = null;
 
-      if (validPricing.length >= 1) {
-        const cheapest = validPricing[0];
-        cheapestMarket = cheapest.market;
-        cheapestUsd = new Decimal(cheapest.usd!).toFixed(2);
-        cheapestNative = cheapest.currentAmount;
-        cheapestCurrency = cheapest.currency;
+          if (validPricing.length >= 1) {
+            const cheapest = validPricing[0];
+            cheapestMarket = cheapest.market;
+            cheapestUsd = new Decimal(cheapest.usd!).toFixed(2);
+            cheapestNative = cheapest.currentAmount;
+            cheapestCurrency = cheapest.currency;
 
-        const usRegion = comp.regions.find(
-          (r) => r.market === "US" && r.status === "available" && r.usd !== null,
-        );
-        const baseline = usRegion && usRegion.market !== cheapest.market
-          ? usRegion
-          : validPricing[validPricing.length - 1];
+            const usRegion = comp.regions.find(
+              (r) => r.market === "US" && r.status === "available" && r.usd !== null,
+            );
+            const baseline = usRegion && usRegion.market !== cheapest.market
+              ? usRegion
+              : validPricing[validPricing.length - 1];
 
-        if (baseline && baseline.market !== cheapest.market) {
-          const baseDec = new Decimal(baseline.usd!);
-          const cheapDec = new Decimal(cheapest.usd!);
-          const diff = baseDec.minus(cheapDec);
+            if (baseline && baseline.market !== cheapest.market) {
+              const baseDec = new Decimal(baseline.usd!);
+              const cheapDec = new Decimal(cheapest.usd!);
+              const diff = baseDec.minus(cheapDec);
 
-          highestMarket = baseline.market;
-          highestUsd = baseDec.toFixed(2);
-          differenceUsd = diff.toFixed(2);
-          differencePercent = baseDec.isZero() ? "0" : diff.div(baseDec).mul(100).toFixed(1);
+              highestMarket = baseline.market;
+              highestUsd = baseDec.toFixed(2);
+              differenceUsd = diff.toFixed(2);
+              differencePercent = baseDec.isZero() ? "0" : diff.div(baseDec).mul(100).toFixed(1);
+            }
+          }
+
+          const winningStoreUrl =
+            (cheapestMarket && comp.regions.find((r) => r.market === cheapestMarket)?.storeUrl) ||
+            comp.regions.find((r) => r.market === "US")?.storeUrl ||
+            `https://www.xbox.com/en-US/games/store/p/${product.id.toLowerCase()}`;
+
+          return {
+            id: product.id,
+            title: product.title,
+            type: product.type,
+            cover: product.cover,
+            publisher: product.publisher,
+            platforms: product.platforms,
+            regions: regionalPrices,
+            cheapestMarket,
+            cheapestUsd,
+            cheapestNative,
+            cheapestCurrency,
+            highestMarket,
+            highestUsd,
+            differenceUsd,
+            differencePercent,
+            storeUrl: winningStoreUrl,
+          };
+        } catch {
+          return null;
         }
-      }
+      }),
+    );
 
-      const winningStoreUrl =
-        (cheapestMarket && comp.regions.find((r) => r.market === cheapestMarket)?.storeUrl) ||
-        comp.regions.find((r) => r.market === "US")?.storeUrl ||
-        `https://www.xbox.com/en-US/games/store/p/${product.id.toLowerCase()}`;
-
-      items.push({
-        id: product.id,
-        title: product.title,
-        type: product.type,
-        cover: product.cover,
-        publisher: product.publisher,
-        platforms: product.platforms,
-        regions: regionalPrices,
-        cheapestMarket,
-        cheapestUsd,
-        cheapestNative,
-        cheapestCurrency,
-        highestMarket,
-        highestUsd,
-        differenceUsd,
-        differencePercent,
-        storeUrl: winningStoreUrl,
-      });
-    } catch {
-      // Ignored if product comparison fails
+    for (const item of chunkItems) {
+      if (item) items.push(item);
     }
   }
 
