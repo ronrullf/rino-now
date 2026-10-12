@@ -16,8 +16,9 @@ async function main() {
   let token: string | undefined = process.env.APIFY_TOKEN;
   let forceRefresh = false;
   let runActor = false;
-  let resultsWanted = 1000;
+  let resultsWanted = 500;
   let actorId: string | undefined = undefined;
+  let startUrl: string | undefined = undefined;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--file" && args[i + 1]) {
@@ -30,6 +31,8 @@ async function main() {
       runActor = true;
     } else if (args[i] === "--results" && args[i + 1]) {
       resultsWanted = Number.parseInt(args[++i], 10);
+    } else if (args[i] === "--url" && args[i + 1]) {
+      startUrl = args[++i];
     } else if (args[i] === "--actor" && args[i + 1]) {
       actorId = args[++i];
     } else if (args[i] === "--force") {
@@ -45,10 +48,11 @@ async function main() {
       process.exit(1);
     }
 
-    console.log(`Starting automated Apify scraper run via API (Actor: ${actorId || "shahidirfan~xbox-games-scraper"}, Target: ${resultsWanted} games)...`);
+    console.log(`Starting automated Apify scraper run via API (Actor: ${actorId || "Hdhz0Ce0rVkqJJI8U"}, Target: ${resultsWanted} games)...`);
     const stats = await triggerActorAndIngest({
       token,
       actorId,
+      startUrl,
       resultsWanted,
       forceRefresh,
       onProgress: (msg) => console.log(`[Apify Status] ${msg}`),

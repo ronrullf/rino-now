@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { repository } from "../db/client";
 import { parseCatalog } from "../providers/catalog-parser";
 import { now } from "../providers/microsoft";
@@ -190,16 +192,18 @@ export async function ingestApifyDataset(
 
 /**
  * Downloads and ingests dataset directly from Apify using dataset ID or API token.
+ * Also stores the raw dataset as a local JSON file in ./data/ for future use.
  */
 export async function fetchAndIngestApifyDataset(
   datasetId: string,
   apiToken?: string,
-  options: { forceRefresh?: boolean } = {},
+  options: { forceRefresh?: boolean; saveJsonPath?: string } = {},
 ): Promise<{
   totalReceived: number;
   validProductIds: number;
   newProductsAdded: number;
   regionsSynced: number;
+  savedFile?: string;
 }> {
   const url = `https://api.apify.com/v2/datasets/${encodeURIComponent(datasetId)}/items?clean=true&format=json${
     apiToken ? `&token=${encodeURIComponent(apiToken)}` : ""
@@ -211,40 +215,57 @@ export async function fetchAndIngestApifyDataset(
   }
 
   const items = (await res.json()) as ApifyRawItem[];
-  return ingestApifyDataset(items, { batchFetchRegions: true, forceRefresh: options.forceRefresh });
+
+  // Save the raw dataset to disk for offline and future use
+  const targetPath =
+    options.saveJsonPath ||
+    path.resolve(process.cwd(), `data/dataset_Apify_${datasetId}_${Date.now()}.json`);
+  try {
+    fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+    fs.writeFileSync(targetPath, JSON.stringify(items, null, 2), "utf-8");
+  } catch (err) {
+    console.warn("Could not save dataset file to disk:", err);
+  }
+
+  const result = await ingestApifyDataset(items, { batchFetchRegions: true, forceRefresh: options.forceRefresh });
+  return {
+    ...result,
+    savedFile: targetPath,
+  };
 }
 
 export type TriggerApifyOptions = {
   token: string;
   actorId?: string;
-  startUrls?: string[];
+  startUrl?: string;
   resultsWanted?: number;
+  useApifyProxy?: boolean;
   forceRefresh?: boolean;
   onProgress?: (message: string) => void;
 };
 
 /**
  * Triggers an Apify scraper actor run via API token, polls until completion,
- * and automatically ingests all fresh games with 4-region USD pricing.
+ * automatically saves the JSON dataset to ./data/, and ingests all fresh games with 4-region USD pricing.
  */
 export async function triggerActorAndIngest(
   options: TriggerApifyOptions,
 ): Promise<{
   runId: string;
   datasetId: string;
+  savedFile?: string;
   totalReceived: number;
   validProductIds: number;
   newProductsAdded: number;
   regionsSynced: number;
 }> {
-  const actor = options.actorId || "shahidirfan~xbox-games-scraper";
-  const startUrls = options.startUrls || [
-    "https://www.xbox.com/en-US/games/browse?PlayWith=SpecialOffers",
-    "https://www.xbox.com/en-US/games/browse?OrderBy=TopPaid",
-  ];
-  const resultsWanted = options.resultsWanted || 1000;
+  const actor = options.actorId || "Hdhz0Ce0rVkqJJI8U";
+  const startUrl = options.startUrl || "https://www.xbox.com/en-US/games/browse?PlayWith=SpecialOffers";
+  const resultsWanted = options.resultsWanted || 500;
+  const maxPages = Math.ceil(resultsWanted / 25) + 10;
+  const useApifyProxy = options.useApifyProxy !== false;
 
-  options.onProgress?.(`Triggering Apify actor ${actor} with target of ${resultsWanted} games...`);
+  options.onProgress?.(`Triggering Apify actor ${actor} with ${resultsWanted} games target on ${startUrl}...`);
 
   const runRes = await fetch(
     `https://api.apify.com/v2/acts/${encodeURIComponent(actor)}/runs?token=${encodeURIComponent(options.token)}`,
@@ -252,8 +273,10 @@ export async function triggerActorAndIngest(
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        startUrls: startUrls.map((url) => ({ url })),
+        startUrl,
         results_wanted: resultsWanted,
+        max_pages: maxPages,
+        proxyConfiguration: { useApifyProxy },
       }),
     },
   );
@@ -277,14 +300,18 @@ export async function triggerActorAndIngest(
 
   let currentStatus = runData.data.status;
   while (["READY", "RUNNING"].includes(currentStatus)) {
-    await new Promise((res) => setTimeout(res, 5000));
-    const statusRes = await fetch(
-      `https://api.apify.com/v2/acts/${encodeURIComponent(actor)}/runs/${encodeURIComponent(runId)}?token=${encodeURIComponent(options.token)}`,
-    );
-    if (statusRes.ok) {
-      const pollData = (await statusRes.json()) as { data: { status: string } };
-      currentStatus = pollData.data.status;
-      options.onProgress?.(`Current Apify run status: ${currentStatus}...`);
+    await new Promise((res) => setTimeout(res, 6000));
+    try {
+      const statusRes = await fetch(
+        `https://api.apify.com/v2/acts/${encodeURIComponent(actor)}/runs/${encodeURIComponent(runId)}?token=${encodeURIComponent(options.token)}`,
+      );
+      if (statusRes.ok) {
+        const pollData = (await statusRes.json()) as { data: { status: string } };
+        currentStatus = pollData.data.status;
+        options.onProgress?.(`Current Apify run status: ${currentStatus}...`);
+      }
+    } catch (err) {
+      options.onProgress?.(`Polling retry: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 
@@ -292,7 +319,7 @@ export async function triggerActorAndIngest(
     throw new Error(`Apify run finished with non-success status: ${currentStatus}`);
   }
 
-  options.onProgress?.(`Apify run succeeded! Fetching dataset ${datasetId}...`);
+  options.onProgress?.(`Apify run succeeded! Fetching and saving dataset ${datasetId}...`);
   const ingestStats = await fetchAndIngestApifyDataset(datasetId, options.token, {
     forceRefresh: options.forceRefresh,
   });
