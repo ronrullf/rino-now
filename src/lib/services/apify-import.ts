@@ -213,3 +213,94 @@ export async function fetchAndIngestApifyDataset(
   const items = (await res.json()) as ApifyRawItem[];
   return ingestApifyDataset(items, { batchFetchRegions: true, forceRefresh: options.forceRefresh });
 }
+
+export type TriggerApifyOptions = {
+  token: string;
+  actorId?: string;
+  startUrls?: string[];
+  resultsWanted?: number;
+  forceRefresh?: boolean;
+  onProgress?: (message: string) => void;
+};
+
+/**
+ * Triggers an Apify scraper actor run via API token, polls until completion,
+ * and automatically ingests all fresh games with 4-region USD pricing.
+ */
+export async function triggerActorAndIngest(
+  options: TriggerApifyOptions,
+): Promise<{
+  runId: string;
+  datasetId: string;
+  totalReceived: number;
+  validProductIds: number;
+  newProductsAdded: number;
+  regionsSynced: number;
+}> {
+  const actor = options.actorId || "shahidirfan~xbox-games-scraper";
+  const startUrls = options.startUrls || [
+    "https://www.xbox.com/en-US/games/browse?PlayWith=SpecialOffers",
+    "https://www.xbox.com/en-US/games/browse?OrderBy=TopPaid",
+  ];
+  const resultsWanted = options.resultsWanted || 1000;
+
+  options.onProgress?.(`Triggering Apify actor ${actor} with target of ${resultsWanted} games...`);
+
+  const runRes = await fetch(
+    `https://api.apify.com/v2/acts/${encodeURIComponent(actor)}/runs?token=${encodeURIComponent(options.token)}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        startUrls: startUrls.map((url) => ({ url })),
+        results_wanted: resultsWanted,
+      }),
+    },
+  );
+
+  if (!runRes.ok) {
+    const errText = await runRes.text();
+    throw new Error(`Failed to start Apify actor run (${runRes.status}): ${errText}`);
+  }
+
+  const runData = (await runRes.json()) as {
+    data: {
+      id: string;
+      defaultDatasetId: string;
+      status: string;
+    };
+  };
+
+  const runId = runData.data.id;
+  const datasetId = runData.data.defaultDatasetId;
+  options.onProgress?.(`Apify run started: ID ${runId}. Polling execution status...`);
+
+  let currentStatus = runData.data.status;
+  while (["READY", "RUNNING"].includes(currentStatus)) {
+    await new Promise((res) => setTimeout(res, 5000));
+    const statusRes = await fetch(
+      `https://api.apify.com/v2/acts/${encodeURIComponent(actor)}/runs/${encodeURIComponent(runId)}?token=${encodeURIComponent(options.token)}`,
+    );
+    if (statusRes.ok) {
+      const pollData = (await statusRes.json()) as { data: { status: string } };
+      currentStatus = pollData.data.status;
+      options.onProgress?.(`Current Apify run status: ${currentStatus}...`);
+    }
+  }
+
+  if (currentStatus !== "SUCCEEDED") {
+    throw new Error(`Apify run finished with non-success status: ${currentStatus}`);
+  }
+
+  options.onProgress?.(`Apify run succeeded! Fetching dataset ${datasetId}...`);
+  const ingestStats = await fetchAndIngestApifyDataset(datasetId, options.token, {
+    forceRefresh: options.forceRefresh,
+  });
+
+  return {
+    runId,
+    datasetId,
+    ...ingestStats,
+  };
+}
+

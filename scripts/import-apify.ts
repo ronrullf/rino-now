@@ -2,14 +2,22 @@ import fs from "node:fs";
 import path from "node:path";
 import nextEnv from "@next/env";
 nextEnv.loadEnvConfig(process.cwd());
-import { ingestApifyDataset, fetchAndIngestApifyDataset, type ApifyRawItem } from "../src/lib/services/apify-import";
+import {
+  ingestApifyDataset,
+  fetchAndIngestApifyDataset,
+  triggerActorAndIngest,
+  type ApifyRawItem,
+} from "../src/lib/services/apify-import";
 
 async function main() {
   const args = process.argv.slice(2);
   let filePath: string | null = null;
   let datasetId: string | null = null;
-  let token: string | undefined = undefined;
+  let token: string | undefined = process.env.APIFY_TOKEN;
   let forceRefresh = false;
+  let runActor = false;
+  let resultsWanted = 1000;
+  let actorId: string | undefined = undefined;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--file" && args[i + 1]) {
@@ -18,12 +26,38 @@ async function main() {
       datasetId = args[++i];
     } else if (args[i] === "--token" && args[i + 1]) {
       token = args[++i];
+    } else if (args[i] === "--run") {
+      runActor = true;
+    } else if (args[i] === "--results" && args[i + 1]) {
+      resultsWanted = Number.parseInt(args[++i], 10);
+    } else if (args[i] === "--actor" && args[i + 1]) {
+      actorId = args[++i];
     } else if (args[i] === "--force") {
       forceRefresh = true;
     }
   }
 
   console.log("=== Xbox Catalog Apify Importer ===");
+
+  if (runActor) {
+    if (!token) {
+      console.error("Error: Apify API token is required to run actor. Pass --token <key> or set APIFY_TOKEN in .env.local");
+      process.exit(1);
+    }
+
+    console.log(`Starting automated Apify scraper run via API (Actor: ${actorId || "shahidirfan~xbox-games-scraper"}, Target: ${resultsWanted} games)...`);
+    const stats = await triggerActorAndIngest({
+      token,
+      actorId,
+      resultsWanted,
+      forceRefresh,
+      onProgress: (msg) => console.log(`[Apify Status] ${msg}`),
+    });
+
+    console.log("Automation complete!");
+    console.log(JSON.stringify(stats, null, 2));
+    return;
+  }
 
   if (datasetId) {
     console.log(`Fetching dataset directly from Apify: ${datasetId}...`);
@@ -52,8 +86,14 @@ async function main() {
   }
 
   console.log(`Usage:
-  npx tsx scripts/import-apify.ts --file ./data/my-apify-results.json [--force]
-  npx tsx scripts/import-apify.ts --dataset <datasetId> [--token <apiToken>] [--force]
+  # 1. Trigger fresh Apify scrape and automatically ingest prices:
+  npx tsx scripts/import-apify.ts --run [--token <apiToken>] [--results 1000]
+
+  # 2. Ingest existing Apify dataset by dataset ID:
+  npx tsx scripts/import-apify.ts --dataset <datasetId> [--token <apiToken>]
+
+  # 3. Ingest local downloaded JSON file:
+  npx tsx scripts/import-apify.ts --file ./data/my-apify-results.json
   `);
 }
 
