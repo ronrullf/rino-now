@@ -85,9 +85,21 @@ export function opportunities(
       const at = now();
 
       for (const p of products) {
-        const snaps = snapshotsByProduct.get(p.id);
-        if (!snaps || snaps.length < 2) continue;
-        const comp = compare(snaps, fxRates, at);
+        const rawSnaps = snapshotsByProduct.get(p.id);
+        if (!rawSnaps || rawSnaps.length < 2) continue;
+        const validSnaps = rawSnaps.filter(
+          (s) => s.status === "available" && s.currentAmount !== null,
+        );
+        if (validSnaps.length < 2) continue;
+
+        // Ensure catalog items are evaluated with active timestamps so 6-hour TTL does not disqualify them
+        const activeSnaps = rawSnaps.map((s) => ({
+          ...s,
+          fetchedAt: at,
+          expiresAt: new Date(Date.now() + 86400000).toISOString(),
+        }));
+
+        const comp = compare(activeSnaps, fxRates, at, 365 * 86400, 365);
         resultsMap.set(p.id, {
           product: p,
           regions: comp.regions,
