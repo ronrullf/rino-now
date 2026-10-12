@@ -7,6 +7,7 @@ import { upstream } from "../http/upstream";
 import { markets, regions } from "../regions";
 import { config } from "../config";
 import type { Product } from "../contracts";
+import { invalidateMasterCatalogCache } from "./catalog-sync";
 
 export type ApifyRawItem = {
   // Shahid Irfan schema
@@ -181,6 +182,8 @@ export async function ingestApifyDataset(
       );
     }
   }
+
+  invalidateMasterCatalogCache();
 
   return {
     totalReceived: items.length,

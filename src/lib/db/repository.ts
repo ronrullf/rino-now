@@ -363,6 +363,45 @@ export class Repository {
         : productSchema.parse(r.data),
     );
   }
+  bulkCatalogData(): {
+    products: Product[];
+    snapshotsByProduct: Map<string, Snapshot[]>;
+  } {
+    const pRows = this.sqlite
+      .prepare(
+        `SELECT DISTINCT p.data FROM products p
+         INNER JOIN regional_snapshots s ON s.product_id = p.product_id
+         ORDER BY p.title ASC`,
+      )
+      .all() as { data: string | Product }[];
+
+    const products = pRows.map((r) =>
+      typeof r.data === "string"
+        ? (JSON.parse(r.data) as Product)
+        : (r.data as Product),
+    );
+
+    const sRows = this.sqlite
+      .prepare(`SELECT product_id, data FROM regional_snapshots`)
+      .all() as { product_id: string; data: string | Snapshot }[];
+
+    const snapshotsByProduct = new Map<string, Snapshot[]>();
+    for (const r of sRows) {
+      try {
+        const snap =
+          typeof r.data === "string"
+            ? (JSON.parse(r.data) as Snapshot)
+            : (r.data as Snapshot);
+        const list = snapshotsByProduct.get(r.product_id) || [];
+        list.push(snap);
+        snapshotsByProduct.set(r.product_id, list);
+      } catch {
+        // Ignore unparseable
+      }
+    }
+
+    return { products, snapshotsByProduct };
+  }
   health() {
     return this.db.get(sql`SELECT 1 AS ready`);
   }

@@ -479,7 +479,9 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {us?.status === "available" && (us.usdAmount || us.nativeAmount) ? (
                         <div>
-                          <p className="font-bold text-sm">${us.usdAmount ?? us.nativeAmount} USD</p>
+                          <p className="font-mono font-bold text-sm tabular-nums tracking-tight text-ink">
+                            ${us.usdAmount ?? us.nativeAmount} <span className="text-[10px] text-muted font-sans font-normal">USD</span>
+                          </p>
                           <a
                             href={us.storeUrl}
                             target="_blank"
@@ -498,11 +500,11 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {tr?.status === "available" && tr.nativeAmount ? (
                         <div>
-                          <p className={`text-sm font-bold ${item.cheapestMarket === "TR" ? "text-positive" : ""}`}>
-                            {tr.usdAmount ? `$${tr.usdAmount} USD` : "—"}
+                          <p className={`font-mono text-sm font-bold tabular-nums tracking-tight ${item.cheapestMarket === "TR" ? "text-positive" : "text-ink"}`}>
+                            {tr.usdAmount ? `$${tr.usdAmount}` : "—"} {tr.usdAmount && <span className="text-[10px] text-muted font-sans font-normal">USD</span>}
                           </p>
-                          <p className="text-[11px] text-muted">
-                            {tr.nativeAmount} TRY
+                          <p className="font-mono text-[11px] text-muted tabular-nums">
+                            {tr.nativeAmount} <span className="font-sans">TRY</span>
                           </p>
                           <a
                             href={tr.storeUrl}
@@ -522,11 +524,11 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {inReg?.status === "available" && inReg.nativeAmount ? (
                         <div>
-                          <p className={`text-sm font-bold ${item.cheapestMarket === "IN" ? "text-positive" : ""}`}>
-                            {inReg.usdAmount ? `$${inReg.usdAmount} USD` : "—"}
+                          <p className={`font-mono text-sm font-bold tabular-nums tracking-tight ${item.cheapestMarket === "IN" ? "text-positive" : "text-ink"}`}>
+                            {inReg.usdAmount ? `$${inReg.usdAmount}` : "—"} {inReg.usdAmount && <span className="text-[10px] text-muted font-sans font-normal">USD</span>}
                           </p>
-                          <p className="text-[11px] text-muted">
-                            ₹{inReg.nativeAmount} INR
+                          <p className="font-mono text-[11px] text-muted tabular-nums">
+                            ₹{inReg.nativeAmount} <span className="font-sans">INR</span>
                           </p>
                           <a
                             href={inReg.storeUrl}
@@ -546,11 +548,11 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {jp?.status === "available" && jp.nativeAmount ? (
                         <div>
-                          <p className={`text-sm font-bold ${item.cheapestMarket === "JP" ? "text-positive" : ""}`}>
-                            {jp.usdAmount ? `$${jp.usdAmount} USD` : "—"}
+                          <p className={`font-mono text-sm font-bold tabular-nums tracking-tight ${item.cheapestMarket === "JP" ? "text-positive" : "text-ink"}`}>
+                            {jp.usdAmount ? `$${jp.usdAmount}` : "—"} {jp.usdAmount && <span className="text-[10px] text-muted font-sans font-normal">USD</span>}
                           </p>
-                          <p className="text-[11px] text-muted">
-                            ¥{jp.nativeAmount} JPY
+                          <p className="font-mono text-[11px] text-muted tabular-nums">
+                            ¥{jp.nativeAmount} <span className="font-sans">JPY</span>
                           </p>
                           <a
                             href={jp.storeUrl}
@@ -570,12 +572,13 @@ export function CatalogBrowser() {
                     <td className="py-3 px-4">
                       {item.cheapestMarket && item.cheapestUsd ? (
                         <div>
-                          <span className="inline-flex items-center gap-1 rounded bg-positive-soft px-2 py-0.5 text-xs font-bold text-positive">
-                            {FLAG_EMOJI[item.cheapestMarket]} {item.cheapestMarket}: ${item.cheapestUsd}
+                          <span className="inline-flex items-center gap-1.5 rounded-md bg-positive-soft px-2 py-0.5 text-xs font-mono font-bold text-positive tabular-nums">
+                            <span>{FLAG_EMOJI[item.cheapestMarket]} {item.cheapestMarket}:</span>
+                            <span>${item.cheapestUsd}</span>
                           </span>
                           {item.differenceUsd && Number(item.differenceUsd) > 0 ? (
-                            <p className="text-[11px] text-positive font-bold mt-1">
-                              Save ${item.differenceUsd} ({item.differencePercent}% gap)
+                            <p className="font-mono text-[11px] text-positive font-bold mt-1 tabular-nums">
+                              Save ${item.differenceUsd} <span className="font-sans text-[10px] bg-positive/10 rounded px-1 py-0.5 font-semibold">(-{item.differencePercent}%)</span>
                             </p>
                           ) : (
                             <p className="text-[10px] text-muted mt-0.5">Identical price</p>
@@ -640,7 +643,7 @@ export function CatalogBrowser() {
                   </ProductLink>
                   <span className="text-[10px] text-muted">{item.id}</span>
                   {item.differenceUsd && Number(item.differenceUsd) > 0 && (
-                    <span className="mt-1 inline-block rounded bg-positive-soft px-1.5 py-0.5 text-[10px] font-bold text-positive">
+                    <span className="mt-1 inline-block rounded bg-positive-soft px-1.5 py-0.5 text-[10px] font-mono font-bold text-positive tabular-nums">
                       Save ${item.differenceUsd} ({item.differencePercent}% gap in {item.cheapestMarket})
                     </span>
                   )}
@@ -656,11 +659,11 @@ export function CatalogBrowser() {
                     </span>
                     <div className="text-right flex items-center gap-2">
                       <div className="text-right">
-                        <span className={`block font-semibold ${reg.market === item.cheapestMarket ? "font-bold text-positive" : ""}`}>
+                        <span className={`block font-mono text-xs tabular-nums tracking-tight ${reg.market === item.cheapestMarket ? "font-bold text-positive" : "font-semibold text-ink"}`}>
                           {reg.usdAmount ? `$${reg.usdAmount} USD` : "N/A"}
                         </span>
                         {reg.nativeAmount && reg.market !== "US" && (
-                          <span className="text-[10px] text-muted block">
+                          <span className="font-mono text-[10px] text-muted block tabular-nums">
                             ({reg.nativeAmount} {reg.currency})
                           </span>
                         )}
