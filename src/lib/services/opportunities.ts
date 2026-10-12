@@ -8,6 +8,8 @@ import {
   type OpportunityKind,
 } from "../pricing/opportunities";
 import type { Comparison } from "../contracts";
+import { compare } from "../pricing/compare";
+import { now } from "../providers/microsoft";
 
 // Editorial selection of recognizable games, not a download-count ranking.
 export const featuredGames = [
@@ -76,19 +78,27 @@ export function opportunities(
     const repo = repository();
     const resultsMap = new Map<string, Comparison>();
 
-    // 1. Immediately evaluate all existing database products with snapshots
+    // 1. Immediately evaluate all existing database products with snapshots in high-speed bulk query
     try {
-      const cachedProducts = repo.productsWithSnapshots();
-      await Promise.all(
-        cachedProducts.map(async (p) => {
-          try {
-            const comp = await comparisons().get(p.id, { cachedOnly: true });
-            resultsMap.set(p.id, comp);
-          } catch {
-            // Product might have partial/unparsable cached snapshot
-          }
-        }),
-      );
+      const { products, snapshotsByProduct } = repo.bulkCatalogData();
+      const fxRates = repo.rates(["Frankfurter", "ExchangeRate-API"]);
+      const at = now();
+
+      for (const p of products) {
+        const snaps = snapshotsByProduct.get(p.id);
+        if (!snaps || snaps.length < 2) continue;
+        const comp = compare(snaps, fxRates, at);
+        resultsMap.set(p.id, {
+          product: p,
+          regions: comp.regions,
+          winners: comp.winners,
+          warnings: [],
+          refreshNeeded: false,
+          saved: false,
+          demo: false,
+          nextRefreshAt: null,
+        });
+      }
     } catch {
       // Non-fatal if sqlite table not yet populated
     }

@@ -3,7 +3,7 @@ export function deploymentSettings(env: Record<string, string | undefined>) {
   return {
     serverless,
     databasePath: serverless
-      ? ":memory:"
+      ? "/tmp/xbox-comparator.sqlite"
       : env.DATABASE_PATH || "./data/xbox-comparator.sqlite",
     // Explicit APP_ORIGIN supports custom domains. Otherwise Vercel's trusted
     // deployment domains are validated by the origin guard.

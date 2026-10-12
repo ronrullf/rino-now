@@ -5,6 +5,8 @@ apify datasets/
 .env*
 !.env.example
 *.sqlite*
+!src/lib/db/seed.sqlite
+!src/lib/db/catalog-seed.json
 *.tsbuildinfo
 playwright-report/
 test-results/

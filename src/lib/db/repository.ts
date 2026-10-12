@@ -1,7 +1,7 @@
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 import { eq, and, desc, like, sql } from "drizzle-orm";
-import { mkdirSync, readFileSync } from "node:fs";
+import { mkdirSync, readFileSync, copyFileSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import * as t from "./schema";
 import {
@@ -20,8 +20,20 @@ export class Repository {
   readonly sqlite: Database.Database;
   readonly db;
   constructor(path: string) {
-    if (path !== ":memory:")
-      mkdirSync(dirname(resolve(path)), { recursive: true });
+    if (path !== ":memory:") {
+      const fullPath = resolve(path);
+      mkdirSync(dirname(fullPath), { recursive: true });
+      if (!existsSync(fullPath)) {
+        const seedSqlite = resolve("src/lib/db/seed.sqlite");
+        if (existsSync(seedSqlite)) {
+          try {
+            copyFileSync(seedSqlite, fullPath);
+          } catch {
+            // Fallback to normal migration
+          }
+        }
+      }
+    }
     this.sqlite = new Database(path);
     this.sqlite.pragma("foreign_keys = ON");
     this.sqlite.pragma("journal_mode = WAL");
@@ -57,6 +69,42 @@ export class Repository {
       CREATE INDEX IF NOT EXISTS price_history_recorded_idx ON price_history(recorded_at);`,
     );
     if (Number(version) > 2) throw Error("Database schema newer than this app");
+
+    // Auto-hydrate initial database from catalog-seed.json if products table is empty (e.g. serverless cold start)
+    try {
+      const countRow = this.sqlite
+        .prepare("SELECT count(*) as c FROM products")
+        .get() as { c: number } | undefined;
+      if (!countRow || countRow.c === 0) {
+        const seedJsonPath = resolve("src/lib/db/catalog-seed.json");
+        if (existsSync(seedJsonPath)) {
+          const raw = JSON.parse(readFileSync(seedJsonPath, "utf8"));
+          const insertP = this.sqlite.prepare(
+            "INSERT OR REPLACE INTO products(product_id, title, data) VALUES (@product_id, @title, @data)",
+          );
+          const insertS = this.sqlite.prepare(
+            "INSERT OR REPLACE INTO regional_snapshots(product_id, market, data) VALUES (@product_id, @market, @data)",
+          );
+          const insertFx = this.sqlite.prepare(
+            "INSERT OR REPLACE INTO fx_snapshots(provider, quote_currency, effective_date, data) VALUES (@provider, @quote_currency, @effective_date, @data)",
+          );
+          this.sqlite.transaction(() => {
+            if (Array.isArray(raw.products)) {
+              for (const p of raw.products) insertP.run(p);
+            }
+            if (Array.isArray(raw.snapshots)) {
+              for (const s of raw.snapshots) insertS.run(s);
+            }
+            if (Array.isArray(raw.fx)) {
+              for (const f of raw.fx) insertFx.run(f);
+            }
+          })();
+        }
+      }
+    } catch {
+      // Non-fatal if seeding skipped
+    }
+
     this.db = drizzle(this.sqlite);
   }
   close() {
